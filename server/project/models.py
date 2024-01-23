@@ -5,7 +5,7 @@ from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 import json
 
-Engine = create_engine("sqlite:///banco.db")
+Engine = create_engine("sqlite:///db.sqlite3")
 Base = declarative_base()
 Session = sessionmaker(bind=Engine, autocommit=False, autoflush=False)
  
