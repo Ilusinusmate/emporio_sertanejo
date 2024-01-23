@@ -1,3 +1,8 @@
 from project import app
+from uvicorn import run 
+from mangum import Mangum
 
-app.run(debug=True, port=8000)
+handler = Mangum(app)
+
+if __name__ == "__main__":
+    run(app, port=8000)

@@ -1,17 +1,28 @@
 #   Imports externos
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+from fastapi import FastAPI
+from dotenv import load_dotenv
+from datetime import timedelta
+from os import getenv
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///emporio_sertanejo.db'
-db = SQLAlchemy(app)
+load_dotenv()
+
+SECRET_JWT_KEY = getenv("SECRET_JWT_KEY")
+ALGORITHM = "HS256"
+EXPIRATION_TIME = timedelta(days=1)
+
+app = FastAPI()
+
 
 #   Inicializar projeto
-from project import database
 from project import models
-from project import routes
-from project import payments
-from project import validations
+from project import schemas
+from project import database
+from project import utils
+from project import oauth2
 
-if __name__ == "__main__":
-    db.create_all()
+from .routers import users, auth, employees, products
+
+app.include_router(users.router)
+app.include_router(auth.router)
+app.include_router(employees.router)
+app.include_router(products.router)
