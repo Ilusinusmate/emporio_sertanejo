@@ -1,5 +1,6 @@
 #   Imports externos
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from datetime import timedelta
 from os import getenv
@@ -11,6 +12,13 @@ ALGORITHM = "HS256"
 EXPIRATION_TIME = timedelta(days=1)
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 #   Inicializar projeto

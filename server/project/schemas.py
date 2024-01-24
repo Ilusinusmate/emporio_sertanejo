@@ -1,4 +1,4 @@
-from pydantic import BaseModel, constr, EmailStr, conint, PositiveInt
+from pydantic import BaseModel, constr, EmailStr, conint, PositiveInt, PositiveFloat
 from pydantic_br import CPF
 from datetime import datetime
 from typing import Optional
@@ -110,8 +110,8 @@ class ProductCreate(BaseModel):
     barcode: constr(max_length=12, min_length=12)
     name: constr(max_length=70)
     description: Optional[str]
-    price: float
-    profit: float
+    price: PositiveFloat
+    profit: PositiveFloat
     stock: Stock
     unit: conint(ge=0, le=2)
 

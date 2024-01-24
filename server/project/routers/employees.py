@@ -61,7 +61,7 @@ async def regist_employee(
         return new_user
     
     except IntegrityError as e:
-        raise HTTPException(status_code=400, detail=f"Email {data.cpf} already resgistered. Error: {e}")
+        raise HTTPException(status_code=400, detail=f"CPF {data.cpf} already resgistered. Error: {e}")
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
