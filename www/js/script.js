@@ -78,12 +78,12 @@ CssMode.addEventListener("click",  (e) => {
     let css = document.getElementById("css");
     let logo1 = document.getElementById("logo1");
     let logo2 = document.getElementById("logo2");
-    if (css.getAttribute("href") === "darklogin.css") {
-        css.setAttribute("href", "lightlogin.css");
+    if (css.getAttribute("href") === "css/darklogin.css") {
+        css.setAttribute("href", "css/lightlogin.css");
         logo1.setAttribute("src", "img/logoemporiolight.png");
         logo2.setAttribute("src", "img/logoemporiolight.png");
-    } else if (css.getAttribute("href") === "lightlogin.css") {
-        css.setAttribute("href", "darklogin.css");
+    } else if (css.getAttribute("href") === "css/lightlogin.css") {
+        css.setAttribute("href", "css/darklogin.css");
         logo1.setAttribute("src", "img/logoemporio.png");
         logo2.setAttribute("src", "img/logoemporio.png");
     }
