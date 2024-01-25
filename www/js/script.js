@@ -3,9 +3,6 @@ API_URL = "http://localhost:8000";
 const RegistBtn = document.getElementById("regist-btn");
 const LoginBtn = document.getElementById("login-btn");
 const CssMode = document.getElementById("css-mode");
-const LoginCpfMask = document.getElementById("logcpf");
-const RegistCpfMask = document.getElementById("registcpf");
-
 
 
 LoginBtn.addEventListener("click", (e) =>{
