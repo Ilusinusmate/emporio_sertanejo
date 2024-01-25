@@ -36,7 +36,7 @@ class User(Base):
     id = Column(Integer, autoincrement=True, primary_key=True)
     username = Column(String(30), nullable=False)
     email = Column(String, nullable=False, unique=True)
-    cpf = Column(String(11), nullable=True, unique=True)
+    cpf = Column(String(14), nullable=True, unique=True)
     points = Column(Integer, default=0)
     password = Column(String, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True),
@@ -45,7 +45,7 @@ class User(Base):
 
 class Employee(Base):
     __tablename__ = "employees"
-    cpf = Column(String(11), primary_key=True)
+    cpf = Column(String(14), primary_key=True)
     password = Column(String, nullable=False)
     name = Column(String(40))
     role = Column(Integer)

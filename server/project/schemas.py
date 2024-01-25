@@ -1,5 +1,5 @@
 from pydantic import BaseModel, constr, EmailStr, conint, PositiveInt, PositiveFloat
-from pydantic_br import CPFDigits
+from pydantic_br import CPFMask
 from datetime import datetime
 from typing import Optional
 
@@ -10,7 +10,7 @@ class UserCreate(BaseModel):
     username: constr(max_length=30)
     email: EmailStr
     password: str
-    cpf: Optional[CPFDigits]
+    cpf: Optional[CPFMask]
     
     class Config:
         json_schema_extra = {
@@ -55,7 +55,7 @@ class TokenData(BaseModel):
 
 class EmployeRegister(BaseModel):
     name: constr(max_length=40)
-    cpf: CPFDigits
+    cpf: CPFMask
     password: str
     
     class Config:
@@ -68,7 +68,7 @@ class EmployeRegister(BaseModel):
         }
     
 class EmployeeLogin(BaseModel):
-    cpf: CPFDigits
+    cpf: CPFMask
     password: str
     
     class Config:
@@ -81,7 +81,7 @@ class EmployeeLogin(BaseModel):
     
 class EmployeeResponse(BaseModel):
     name: str
-    cpf: CPFDigits
+    cpf: CPFMask
     class Config:
         json_schema_extra = {
             "example":{
@@ -133,7 +133,7 @@ class ProductCreate(BaseModel):
     
 class ProductResponse(ProductCreate):
     id: PositiveInt
-    employee_registered: CPFDigits
+    employee_registered: CPFMask
     created_at: datetime
     
     class Config:

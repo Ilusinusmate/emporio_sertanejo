@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <!--DEFINIÇÃO DE CHARSET E ESCALA-->
@@ -6,8 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--DEFINIÇÃO DO TÍTULO-->
         <title>Empório Sertanejo - Login</title>
-        <!--DEFINIÇÃO DO FAVICON-->
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <!--IMPORTAÇÃO DO BOOTSTRAP-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -37,14 +35,14 @@
                                                 <h4><img id="logo1" width="60%" src="img/logoemporio.png" alt=""></h4>
 
                                                 <div class="form-group">
-                                                    <input type="cpf" name="logcpf" class="form-style" placeholder="CPF:" id="logcpf" autocomplete="off">
+                                                    <input onkeypress="CpfMask(this)" type="cpf" autocomplete="off" maxLength="14" name="logcpf" class="form-style" placeholder="CPF:" id="logcpf" autocomplete="off">
                                                     <i class="input-icon uil uil-at"></i>
                                                 </div>	
                                                 <div class="form-group mt-2">
                                                     <input type="password" name="logpass" class="form-style" placeholder="Senha:" id="logpass" autocomplete="off">
                                                     <i class="input-icon uil uil-lock-alt"></i>
                                                 </div>
-                                                <button class="btn mt-4" type="submit" id="login-btn">enviar</button>
+                                                <button class="btn mt-4" type="button" id="login-btn">enviar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -58,20 +56,20 @@
                                                     <i class="input-icon uil uil-user"></i>
                                                 </div>	
                                                 <div class="form-group mt-2">
-                                                    <input type="cpf" name="logcpf" class="form-style" placeholder="CPF:" id="registcpf" autocomplete="off">
+                                                    <input onkeypress="CpfMask(this)" type="cpf" maxLength="14" name="logcpf" class="form-style" placeholder="CPF:" id="registcpf" autocomplete="off">
                                                     <i class="input-icon uil uil-at"></i>
                                                 </div>	
                                                 <div class="form-group mt-2">
                                                     <input type="password" name="logpass" class="form-style" placeholder="Senha:" id="registpass" autocomplete="off">
                                                     <i class="input-icon uil uil-lock-alt"></i>
                                                 </div>
-                                                <button class="btn mt-4" type="submit" id="regist-btn">enviar</button>
+                                                <button class="btn mt-4" type="button" id="regist-btn">enviar</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button class="mt-4" onclick="darkMode()">
+                            <button id="css-mode" class="mt-4">
                                 dark mode
                             </button>
                         </div>
