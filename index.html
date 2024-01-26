@@ -7,17 +7,77 @@
         <!--DEFINIÇÃO DO TÍTULO-->
         <title>Empório Sertanejo</title>
         <!--IMPORTAÇÃO DO BOOTSTRAP-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <!-- FONT AWESOME -->
         <script src="https://kit.fontawesome.com/e995112375.js" crossorigin="anonymous"></script>
         <!--IMPORTAÇÃO DO ARQUIVO DE CSS-->
         <link rel="stylesheet" href="www/css/index/index.css">
         <!--IMPORTAÇÃO DO ARQUIVO DE JAVASCRIPT-->
-        <script src="js/login.js" defer="true"></script>
+        <script src="www/js/index.js" defer="true"></script>
     </head>
     <body>
+        <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="www/img/logoemporiolight.png" height="100" />
+                </a>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15819.46816960684!2d-36.1688429!3d-7.5894473!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc57e4afa9d6a0e9d!2sLajedo%20do%20Marinho!5e0!3m2!1sen!2sbr!4v1665622511404!5m2!1sen!2sbr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link mx-2 active" aria-current="page" href="#">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Opções
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Sistema
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Sobre a Empório Sertanejo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="www/login.html">
+                                        Login
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="filiais" class="mt-4">
+            <select id="cidade" class="selectpicker mb-4">
+                <option value="cabedelo">
+                    Cabedelo
+                </option>
+                <option value="joaopessoa">
+                    João Pessoa
+                </option>
+            </select>    
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.3568182761953!2d-34.86230400010406!3d-7.099861016201429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd620b25c3a7%3A0x2265a276573909ae!2sEmp%C3%B3rio%20Sertanejo!5e0!3m2!1sen!2sbr!4v1706307931197!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </body>
 </html>

@@ -87,7 +87,7 @@ CssMode.addEventListener("click",  (e) => {
         logo1.setAttribute("src", "img/logoemporio.png");
         logo2.setAttribute("src", "img/logoemporio.png");
         img.setAttribute("src", "img/sun.png");
-    }
+    };
 })
 
 
@@ -99,5 +99,5 @@ function CpfMask(input) {
         input.value += ".";
     } else if (cpfmasklength === 11) {
         input.value += "-";
-    }
+    };
 }
