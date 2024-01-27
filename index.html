@@ -30,53 +30,32 @@
                 <div class=" collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto ">
                         <li class="nav-item">
-                            <a class="nav-link mx-2 active" aria-current="page" href="#">
-                                Inicio
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link mx-2" href="#">
                                 Produtos
                             </a>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Opções
+                        <li class="nav-item">
+                            <select id="cidade" class="selectpicker mb-4">
+                                <option value="cabedelo">
+                                    Cabedelo
+                                </option>
+                                <option value="joaopessoa">
+                                    João Pessoa
+                                </option>
+                            </select>   
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2 active" aria-current="page" href="www/login.html">
+                                Login
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        Sistema
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        Sobre a Empório Sertanejo
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="www/login.html">
-                                        Login
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <div id="filiais" class="mt-4">
-            <select id="cidade" class="selectpicker mb-4">
-                <option value="cabedelo">
-                    Cabedelo
-                </option>
-                <option value="joaopessoa">
-                    João Pessoa
-                </option>
-            </select>    
+        <div id="filiais" class="mt-4"> 
             <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.3568182761953!2d-34.86230400010406!3d-7.099861016201429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd620b25c3a7%3A0x2265a276573909ae!2sEmp%C3%B3rio%20Sertanejo!5e0!3m2!1sen!2sbr!4v1706307931197!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </body>
