@@ -77,16 +77,16 @@ CssMode.addEventListener("click",  (e) => {
     let logo2 = document.getElementById("logo2");
     let img = document.getElementById("sun");
 
-    if (css.getAttribute("href") === "css/login/darklogin.css") {
-        css.setAttribute("href", "css/login/lightlogin.css");
-        logo1.setAttribute("src", "img/logoemporiolight.png");
-        logo2.setAttribute("src", "img/logoemporiolight.png");
-        img.setAttribute("src", "img/moon.png");
-    } else if (css.getAttribute("href") === "css/login/lightlogin.css") {
-        css.setAttribute("href", "css/login/darklogin.css");
-        logo1.setAttribute("src", "img/logoemporio.png");
-        logo2.setAttribute("src", "img/logoemporio.png");
-        img.setAttribute("src", "img/sun.png");
+    if (css.getAttribute("href") === "../css/login/lightlogin.css") {
+        css.setAttribute("href", "../css/login/darklogin.css");
+        logo1.setAttribute("src", "../img/logoemporio.png");
+        logo2.setAttribute("src", "../img/logoemporio.png");
+        img.setAttribute("src", "../img/sun.png");
+    } else if (css.getAttribute("href") === "../css/login/darklogin.css") {
+        css.setAttribute("href", "../css/login/lightlogin.css");
+        logo1.setAttribute("src", "../img/logoemporiolight.png");
+        logo2.setAttribute("src", "../img/logoemporiolight.png");
+        img.setAttribute("src", "../img/moon.png");
     };
 })
 

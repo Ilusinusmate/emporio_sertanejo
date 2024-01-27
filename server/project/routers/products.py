@@ -1,6 +1,7 @@
-from fastapi import APIRouter, Depends, Body
+from fastapi import APIRouter, Depends, Body, Query
 from fastapi.exceptions import HTTPException
 from sqlalchemy.exc import IntegrityError
+from typing import List
 
 from project import schemas
 from project.models import Product, Session
@@ -33,6 +34,27 @@ def register_product(
         
         return new_product
             
+    except HTTPException as e:
+        raise e
+    
+    except Exception as e:
+        raise HTTPException(detail=str(e), status_code=500)
+    
+@router.get("/all", response_model=List[schemas.ProductQuery])    
+def query_all_products(
+    unit: schemas.conint(ge=0, le=2) = Query(),
+    current_session: Session = Depends(get_db)
+) -> schemas.ProductQuery:
+
+    try:
+        
+        products = current_session.query(Product).filter_by(unit=unit).all()
+        
+        products = [schemas.ProductQuery(**i.__dict__) for i in products ]
+        
+        
+        return products
+    
     except HTTPException as e:
         raise e
     

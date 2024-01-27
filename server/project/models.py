@@ -16,7 +16,7 @@ class Product(Base):
     
     __tablename__ = "products"
     id = Column(Integer, autoincrement=True, primary_key=True)
-    barcode = Column(String(12), nullable=False, unique=True)
+    barcode = Column(String(12), nullable=False)
     name = Column(String(70), nullable=False)
     description = Column(Text, nullable=True)
     price = Column(Float, nullable=False)

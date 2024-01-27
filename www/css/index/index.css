@@ -17,10 +17,6 @@ body {
                  -4px -4px 8px #e3f7cc;
 }
 
-#neubar .dropdown-menu a:hover {
-    color: #454545
-}
-
 #neubar .nav-item {
     margin : auto 4px;
 }
@@ -39,10 +35,8 @@ a.navbar-brand {
     color: #454545
 }
 
-.nav-link {
-    transition: 0.5s
-}
-
-#filiais {
-    text-align: center;
+#cidade {
+    background: none;
+    border: none;
+    cursor: pointer;
 }

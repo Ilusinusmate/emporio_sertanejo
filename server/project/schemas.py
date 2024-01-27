@@ -1,7 +1,7 @@
 from pydantic import BaseModel, constr, EmailStr, conint, PositiveInt, PositiveFloat
 from pydantic_br import CPFMask
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List
 
 
 #   USER SCHEMAS
@@ -154,4 +154,11 @@ class ProductResponse(ProductCreate):
                 "unit": 1
             }
         }
+
+class ProductQuery(BaseModel):
+    name: str
+    description: str
+    price: PositiveFloat
     
+    class Config:
+        from_atributes = True
