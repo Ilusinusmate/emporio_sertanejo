@@ -1,3 +1,5 @@
+const CssMode = document.getElementById("css-mode");
+
 document.addEventListener("DOMContentLoaded", () => {
     cidade = document.getElementById("cidade");
     cidade.addEventListener("input", handleSelect);
@@ -13,3 +15,19 @@ function handleSelect(ev) {
     }
 }
 
+
+CssMode.addEventListener("click",  (e) => {
+    let css = document.getElementById("css");
+    let logo = document.getElementById("logo");
+    let img = document.getElementById("sun");
+
+    if (css.getAttribute("href") === "www/css/index/lightindex.css") {
+        css.setAttribute("href", "www/css/index/darkindex.css");
+        logo.setAttribute("src", "www/img/logoemporio.png");
+        img.setAttribute("src", "www/img/sun.png");
+    } else if (css.getAttribute("href") === "www/css/index/darkindex.css") {
+        css.setAttribute("href", "www/css/index/lightindex.css");
+        logo.setAttribute("src", "www/img/logoemporiolight.png");
+        img.setAttribute("src", "www/img/moon.png");
+    };
+})
