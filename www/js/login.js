@@ -1,4 +1,4 @@
-API_URL = "http://localhost:8000";
+API_URL = "https://emporio-sertanejo-api.onrender.com";
 
 const RegistBtn = document.getElementById("regist-btn");
 const LoginBtn = document.getElementById("login-btn");

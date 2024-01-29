@@ -2,9 +2,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import timedelta
-from os import getenv
+import os
 
-SECRET_JWT_KEY = getenv("SECRET_JWT_KEY")
+SECRET_JWT_KEY = os.environ.get("SECRET_JWT_KEY")
 ALGORITHM = "HS256"
 EXPIRATION_TIME = timedelta(days=1)
 

@@ -1,3 +1,5 @@
+API_URL = "https://emporio-sertanejo-api.onrender.com"
+
 const CssMode = document.getElementById("css-mode");
 
 CssMode.addEventListener("click",  (e) => {
@@ -17,7 +19,6 @@ CssMode.addEventListener("click",  (e) => {
 
 })
 
-API_URL = "http://localhost:8000"
 
 cidade = document.getElementById("cidade");
 var products = undefined;
