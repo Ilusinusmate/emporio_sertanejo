@@ -13,7 +13,7 @@ body {
   
 .nav-item .active {
     border-radius: 6px;
-    background: linear-gradient(145deg, #317939, #0b4611);
+    background: linear-gradient(145deg, #1e3524, #185e1f);
     box-shadow:  4px 4px 8px #d6d9d61c, -4px -4px 8px #24242400;
 }
 
