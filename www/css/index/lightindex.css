@@ -65,3 +65,9 @@ a.navbar-brand {
 #css-mode {
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+    #neubar .nav-item {
+      margin-bottom: 15px; 
+    }
+}
