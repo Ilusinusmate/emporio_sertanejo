@@ -30,4 +30,5 @@ CssMode.addEventListener("click",  (e) => {
         logo.setAttribute("src", "www/img/logoemporiolight.png");
         img.setAttribute("src", "www/img/moon.png");
     };
+
 })

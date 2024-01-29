@@ -6,15 +6,15 @@ body {
 }
 
 #neubar {
-    background: #e3f4ce;
-    box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
+    background: #f9d7c3;
+    box-shadow: 4px 6px 12px rgba(0,0,0,0.4);
+    opacity: 0.9;
 }
   
 .nav-item .active {
     border-radius: 6px;
-    background: linear-gradient(145deg, #ecffca, #e3fdce);
-    box-shadow:  4px 4px 8px #c2e2b4,
-                 -4px -4px 8px #e3f7cc;
+    background: linear-gradient(145deg, #f4e1d1, #fbb67d);
+    box-shadow:  4px 4px 8px #f7966a, -4px -4px 8px #ffd3c2;
 }
 
 #neubar .nav-item {
@@ -32,11 +32,36 @@ body {
 }
 
 a.navbar-brand {
-    color: #454545
+    color: #454545;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.2s;
 }
 
 #cidade {
+    color: black;
     background: none;
     border: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#cidade:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+#cidade:focus {
+    color: black;
+    transition: 0.2s;
+}
+
+#css-mode {
     cursor: pointer;
 }
