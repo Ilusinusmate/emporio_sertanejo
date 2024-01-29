@@ -1,11 +1,8 @@
 #   Imports externos
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
 from datetime import timedelta
 from os import getenv
-
-load_dotenv()
 
 SECRET_JWT_KEY = getenv("SECRET_JWT_KEY")
 ALGORITHM = "HS256"
@@ -22,11 +19,11 @@ app.add_middleware(
 
 
 #   Inicializar projeto
-from project import models
-from project import schemas
-from project import database
-from project import utils
-from project import oauth2
+from server.project import models
+from server.project import schemas
+from server.project import database
+from server.project import utils
+from server.project import oauth2
 
 from .routers import users, auth, employees, products
 
