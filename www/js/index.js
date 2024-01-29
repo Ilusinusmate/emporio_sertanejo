@@ -1,3 +1,5 @@
+const CssMode = document.getElementById("css-mode");
+
 document.addEventListener("DOMContentLoaded", () => {
     cidade = document.getElementById("cidade");
     cidade.addEventListener("input", handleSelect);
