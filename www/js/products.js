@@ -1,3 +1,22 @@
+const CssMode = document.getElementById("css-mode");
+
+CssMode.addEventListener("click",  (e) => {
+    let css = document.getElementById("css");
+    let logo = document.getElementById("logo");
+    let img = document.getElementById("sun");
+
+    if (css.getAttribute("href") === "../css/index/lightindex.css") {
+        css.setAttribute("href", "../css/index/darkindex.css");
+        logo.setAttribute("src", "../img/logoemporio.png");
+        img.setAttribute("src", "../img/sun.png");
+    } else if (css.getAttribute("href") === "../css/index/darkindex.css") {
+        css.setAttribute("href", "../css/index/lightindex.css");
+        logo.setAttribute("src", "../img/logoemporiolight.png");
+        img.setAttribute("src", "../img/moon.png");
+    };
+
+})
+
 API_URL = "http://localhost:8000"
 
 cidade = document.getElementById("cidade");
