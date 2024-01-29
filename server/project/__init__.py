@@ -5,6 +5,9 @@ from datetime import timedelta
 import os
 
 SECRET_JWT_KEY = os.environ.get("SECRET_JWT_KEY")
+print("KEY:", SECRET_JWT_KEY)
+if SECRET_JWT_KEY is None:
+    SECRET_JWT_KEY = "123123123"
 ALGORITHM = "HS256"
 EXPIRATION_TIME = timedelta(days=1)
 
