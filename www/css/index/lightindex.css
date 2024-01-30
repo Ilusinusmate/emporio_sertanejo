@@ -5,12 +5,19 @@ body {
     overflow-x: hidden;
 }
 
+/**ESTILIZAÇÃO DA NAVBAR**/
 #neubar {
     background: #f9d7c3;
     box-shadow: 4px 6px 12px rgba(0,0,0,0.4);
     opacity: 0.9;
 }
-  
+
+@media (max-width: 767px) {
+    #neubar .nav-item {
+      margin-bottom: 15px; 
+    }
+}
+
 .nav-item .active {
     border-radius: 6px;
     background: linear-gradient(145deg, #f4e1d1, #fbb67d);
@@ -44,6 +51,7 @@ a.navbar-brand {
     transition: 0.2s;
 }
 
+/**SELETOR DE CIDADES**/
 #cidade {
     color: black;
     background: none;
@@ -62,12 +70,7 @@ a.navbar-brand {
     transition: 0.2s;
 }
 
+/**SWITCH DE TEMA**/
 #css-mode {
     cursor: pointer;
-}
-
-@media (max-width: 767px) {
-    #neubar .nav-item {
-      margin-bottom: 15px; 
-    }
 }

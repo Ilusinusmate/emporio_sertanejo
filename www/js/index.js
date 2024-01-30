@@ -1,10 +1,13 @@
+//const para descobrir qual o tema que a página se encontra (dark mode ou light mode)
 const CssMode = document.getElementById("css-mode");
 
+//função para no carregamento da página ele já fazer a seleção correta para o mapa
 document.addEventListener("DOMContentLoaded", () => {
     cidade = document.getElementById("cidade");
     cidade.addEventListener("input", handleSelect);
 })
 
+//função que de fato carrega o mapa
 function handleSelect(ev) {
     let select = ev.target;
     let map = document.getElementById("map");
@@ -15,7 +18,7 @@ function handleSelect(ev) {
     }
 }
 
-
+//função que troca o tema da página
 CssMode.addEventListener("click",  (e) => {
     let css = document.getElementById("css");
     let logo = document.getElementById("logo");

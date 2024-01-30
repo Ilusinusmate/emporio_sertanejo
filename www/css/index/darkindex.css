@@ -6,11 +6,18 @@ body {
     overflow-x: hidden;
 }
 
+/**ESTILIZAÇÃO DA NAVBAR**/
 #neubar {
     background-color: #192b1e;
     box-shadow: 4px 6px 12px rgba(140, 131, 131, 0.17);
 }
-  
+
+@media (max-width: 767px) {
+    #neubar .nav-item {
+      margin-bottom: 15px; 
+    }
+}
+
 .nav-item .active {
     border-radius: 6px;
     background: linear-gradient(145deg, #1e3524, #185e1f);
@@ -22,17 +29,12 @@ body {
 }
 
 #neubar .nav-item {
-    margin : auto 4px;
+    margin: auto 4px;
 }
 
 #neubar a {
-    padding-left:12px;
-    padding-right:12px;
-}
-
-#neubar .dropdown-menu {
-    background : #f7f4f4;
-    transition: 0.5s;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 a.navbar-brand {
@@ -49,6 +51,7 @@ a.navbar-brand {
     transition: 0.2s;
 }
 
+/**SELETOR DE CIDADES**/
 #cidade {
     background: none;
     border: none;
@@ -67,12 +70,7 @@ a.navbar-brand {
     transition: 0.2s;
 }
 
+/**SWITCH DE TEMA**/
 #css-mode {
     cursor: pointer;
-}
-
-@media (max-width: 767px) {
-    #neubar .nav-item {
-      margin-bottom: 15px; 
-    }
 }
