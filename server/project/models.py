@@ -25,6 +25,7 @@ class Product(Base):
         "quantity": 0,
         "type": "grams"
     }))
+    image_link = Column(String, nullable=True, default=None)
     unit = Column(Integer, nullable=False)
     employee_registered = Column(String, ForeignKey("employees.cpf"), nullable=True)
     created_at = Column(TIMESTAMP(timezone=True),

@@ -3,6 +3,8 @@ from pydantic_br import CPFMask
 from datetime import datetime
 from typing import Optional, List
 
+BARCODE = constr(max_length=12, min_length=12)
+UNIT = conint(ge=0, le=2)
 
 #   USER SCHEMAS
 
@@ -135,8 +137,10 @@ class ProductResponse(ProductCreate):
     id: PositiveInt
     employee_registered: CPFMask
     created_at: datetime
+    image_link: Optional[str]
     
     class Config:
+        from_atributes = True
         json_schema_extra = {
             "example": {
                 "id": 27,
@@ -151,6 +155,7 @@ class ProductResponse(ProductCreate):
                 },
                 "employee_registered": "123.456.789-09",
                 "created_at": "2024-01-23T02:55:07.625430",
+                "image_link": "https://your.image.com",
                 "unit": 1
             }
         }
@@ -159,6 +164,8 @@ class ProductQuery(BaseModel):
     name: str
     description: str
     price: PositiveFloat
+    image_link: str
     
     class Config:
         from_atributes = True
+

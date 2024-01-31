@@ -2,14 +2,21 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import timedelta
+from dotenv import load_dotenv 
 import os
 
+load_dotenv("../../.env")
 SECRET_JWT_KEY = os.environ.get("SECRET_JWT_KEY")
+
+#   DEBBUGING
 print("KEY:", SECRET_JWT_KEY)
-if SECRET_JWT_KEY is None:
-    SECRET_JWT_KEY = "123123123"
+if SECRET_JWT_KEY is None: SECRET_JWT_KEY = "123123123"
+    
 ALGORITHM = "HS256"
 EXPIRATION_TIME = timedelta(days=1)
+
+IMAGE_API_KEY = os.environ.get("IMAGE_API_KEY")
+IMAGE_API_URl = "https://api.imgbb.com/1/upload"
 
 app = FastAPI()
 app.add_middleware(

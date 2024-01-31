@@ -12,7 +12,7 @@ from server.project.oauth2 import create_jwt_token
 
 router = APIRouter(
     prefix="/employee",
-    tags=["Authentication"]
+    tags=["Employee"]
 )
 
 
