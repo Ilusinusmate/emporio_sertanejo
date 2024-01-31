@@ -23,15 +23,20 @@ CssMode.addEventListener("click",  (e) => {
     let css = document.getElementById("css");
     let logo = document.getElementById("logo");
     let img = document.getElementById("sun");
+    let nav = document.getElementById("neubar");
 
     if (css.getAttribute("href") === "www/css/index/lightindex.css") {
         css.setAttribute("href", "www/css/index/darkindex.css");
         logo.setAttribute("src", "www/img/logoemporio.png");
         img.setAttribute("src", "www/img/sun.png");
+        nav.classList.remove("navbar-light");
+        nav.classList.add("navbar-dark");
     } else if (css.getAttribute("href") === "www/css/index/darkindex.css") {
         css.setAttribute("href", "www/css/index/lightindex.css");
         logo.setAttribute("src", "www/img/logoemporiolight.png");
         img.setAttribute("src", "www/img/moon.png");
+        nav.classList.remove("navbar-dark");
+        nav.classList.add("navbar-light");
     };
 
 })
