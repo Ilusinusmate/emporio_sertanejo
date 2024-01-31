@@ -19,6 +19,18 @@ EXPIRATION_TIME = timedelta(days=1)
 IMAGE_API_KEY = os.environ.get("IMAGE_API_KEY")
 IMAGE_API_URl = "https://api.imgbb.com/1/upload"
 
+DATABASE_NAME = os.environ.get("DATABASE_NAME")
+DATABASE_HOST = os.environ.get("DATABASE_HOST")
+DATABASE_USER = os.environ.get("DATABASE_USER")
+DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD")
+DATABASE_PORT = os.environ.get("DATABASE_PORT")
+DATABASE_ENGINE = "postgresql+psycopg2"
+DATABASE_CONECTION = f"{DATABASE_ENGINE}://{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_NAME}?sslmode=require"
+
+if DATABASE_NAME is None:
+    DATABASE_CONECTION = "sqlite:///db.sqlite3"
+
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
