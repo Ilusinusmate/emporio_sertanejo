@@ -10,31 +10,9 @@ body{
     color: #d2d0d8;
 }
 
+/**CARD DE FORMULÁRIO**/
 a {
     cursor: pointer;
-    transition: all 200ms linear;
-}
-
-a:hover {
-	  text-decoration: none;
-}
-
-.link {
-    color: #c4c3ca;
-}
-
-.link:hover {
-    color: #ffeba7;
-}
-
-p {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-h4 {
-    font-weight: 600;
 }
 
 h6 span{
@@ -49,6 +27,7 @@ h6 span{
     display: block;
 }
 
+/**ESTILIZAÇÃO DOS FORMATOS DO CARTÃO DE FORM**/
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
     position: absolute;
@@ -153,6 +132,7 @@ h6 span{
     display: block;
 }
 
+/**INPUTS DO FORMULÁRIO**/
 .form-group{ 
     position: relative;
     display: block;
@@ -251,6 +231,7 @@ h6 span{
     transition: all 200ms linear;
 }
 
+/**BOTÕES DO FORMULÁRIO**/
 .btn{  
     border-radius: 4px;
     height: 44px;
@@ -293,6 +274,7 @@ h6 span{
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 
+/**SELETOR DE TEMA**/
 #sun {
     width: 35px;
     height: 35px;

@@ -17,8 +17,10 @@
     </head>
     
     <body>
+        <!--NAVBAR DO SITE-->
         <nav class="navbar navbar-expand-sm navbar-light d-flex" id="neubar">
             <div class="container">
+                <!--Logo da Navbar-->
                 <a class="navbar-brand" href="../../index.html">
                     <img id="logo" src="../img/logoemporiolight.png" height="100" />
                 </a>
@@ -26,15 +28,17 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-          
-                <div align="center" class="justify-content-centercollapse navbar-collapse" align="center" id="navbarNavDropdown">
+                
+                <!--Inicio das Tags de Ancoragem da Navbar-->
+                <div align="center" class="justify-content-center collapse navbar-collapse" align="center" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto ">
+                        <!--Ancoragem Para a Página de Produtos-->
                         <li class="nav-item">
                             <a class="nav-link mx-2" href="../html/products.html">
                                 Produtos
                             </a>
                         </li>
-
+                        <!--Seletor de Cidade-->
                         <li class="nav-item">
                             <select id="cidade" class="selectpicker">
                                 <option value="cabedelo">
@@ -45,11 +49,13 @@
                                 </option>
                             </select>   
                         </li>
+                        <!--Ancoragem Para a Página de Login-->
                         <li class="nav-item">
                             <a class="nav-link mx-2 active" aria-current="page" href="../html/login.html">
                                 Login
                             </a>
                         </li>
+                        <!--Troca de Tema da Página-->
                         <li class="nav-item">
                             <a id="css-mode" class="nav-link mx-2">
                                 <img id="sun" src="../img/moon.png" width="35px" height="35px" alt="">
@@ -60,6 +66,7 @@
             </div>
         </nav>
 
+        <!--IMPORTAÇÃO DO ARQUIVO DE JAVASCRIPT-->
         <script src="../js/products.js" defer="true"></script>
     </body>
 </html>

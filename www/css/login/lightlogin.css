@@ -9,31 +9,9 @@ body{
     background-color: #dbdbdb;
 }
 
+/**SEÇÃO DO FORMULÁRIO**/
 a {
 	cursor: pointer;
-    transition: all 200ms linear;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-.link {
-    color: #c4c3ca;
-}
-
-.link:hover {
-    color: #ffeba7;
-}
-
-p {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-h4 {
-    font-weight: 600;
 }
 
 h6 span{
@@ -48,6 +26,7 @@ h6 span{
     display: block;
 }
 
+/**ESTILIZAÇÃO DOS FORMATOS DO CARTÃO DE FORM**/
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
     position: absolute;
@@ -92,6 +71,7 @@ h6 span{
     transform: translateX(44px) rotate(-270deg);
 }
 
+/**ESTILIZAÇÃO DOS FORMATOS DO CARTÃO DE FORM**/
 .card-3d-wrap {
     position: relative;
     width: 400px;
@@ -152,6 +132,7 @@ h6 span{
     display: block;
 }
 
+/**INPUTS DO FORMULÁRIO**/
 .form-group{ 
     position: relative;
     display: block;
@@ -183,19 +164,6 @@ h6 span{
     border: none;
     outline: none;
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
-}
-
-.input-icon {
-    position: absolute;
-    top: 0;
-    left: 18px;
-    height: 48px;
-    font-size: 24px;
-    line-height: 48px;
-    text-align: left;
-    color:#000000;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
 }
 
 .form-group input:-ms-input-placeholder  {
@@ -249,7 +217,7 @@ h6 span{
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-
+/**BOTÕES DO FORMULÁRIO**/
 .btn{  
     border-radius: 4px;
     height: 44px;
@@ -292,8 +260,8 @@ h6 span{
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 
+/**SELETOR DE TEMA**/
 #sun {
     width: 35px;
     height: 35px;
 }
-

@@ -7,34 +7,41 @@
         <!--DEFINIÇÃO DO TÍTULO-->
         <title>Empório Sertanejo</title>
         <!--IMPORTAÇÃO DO BOOTSTRAP-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <!-- FONT AWESOME -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><!-- FONT AWESOME -->
         <script src="https://kit.fontawesome.com/e995112375.js" crossorigin="anonymous"></script>
         <!--IMPORTAÇÃO DO ARQUIVO DE CSS-->
         <link id="css" rel="stylesheet" href="www/css/index/lightindex.css">
-        <!--IMPORTAÇÃO DO ARQUIVO DE JAVASCRIPT-->
     </head>
     
     <body>
+        <!--NAVBAR DO SITE-->
         <nav class="navbar navbar-expand-sm navbar-light d-flex" id="neubar">
             <div class="container">
+                <!--Logo da Navbar-->
                 <a class="navbar-brand" href="#">
                     <img id="logo" src="www/img/logoemporiolight.png" height="100" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                    </span>
                 </button>
           
-                <div align="center" class="justify-content-centercollapse navbar-collapse" align="center" id="navbarNavDropdown">
+                <!--Inicio das Tags de Ancoragem da Navbar-->
+                <div align="center" class="justify-content-center collapse navbar-collapse" align="center" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto ">
+                        <!--Ancoragem Para a Página de Produtos-->
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="www/html/products.html">
+                            <a id="products" class="nav-link mx-2" href="www/html/products.html">
                                 Produtos
                             </a>
                         </li>
-
+                        <!--Seletor de Cidade-->
                         <li class="nav-item">
                             <select id="cidade" class="selectpicker">
                                 <option value="cabedelo">
@@ -45,11 +52,13 @@
                                 </option>
                             </select>   
                         </li>
+                        <!--Ancoragem Para a Página de Login-->
                         <li class="nav-item">
                             <a class="nav-link mx-2 active" aria-current="page" href="www/html/login.html">
                                 Login
                             </a>
                         </li>
+                        <!--Troca de Tema da Página-->
                         <li class="nav-item">
                             <a id="css-mode" class="nav-link mx-2">
                                 <img id="sun" src="www/img/moon.png" width="35px" height="35px" alt="">
@@ -59,11 +68,46 @@
                 </div>
             </div>
         </nav>
-        
+        <!--SLIDER-->
+        <div id="mainSlider" class="carousel slide" data-ride="carousel">
+            <ol id="slide" class="carousel-indicators">
+                <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+                <li data-target="#mainSlider" data-slide-to="2"></li>
+            </ol>
+
+            <div id="carrossel" class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="www/img/castanha-1.jpg" class="d-block w-100">
+    
+                    <div id="c1" class="carousel-caption d-md-block">
+                        <h2 id="texto1">EMPORIO SERTANEJO</h2>
+                        <p>Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="www/img/castanha-2.jpg" class="imageminicio">
+                    <div id="c2" class="carousel-caption d-md-block">
+                        <h2 id="texto2">LINKS UTEIS DO LOCAL</h2>
+                        <p>Lorem ipsum Lorem ipsum </p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!--Localização da Empório Sertanejo Em Um Mapa do Google Maps-->
         <div id="filiais" class="mt-4"> 
             <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.3568182761953!2d-34.86230400010406!3d-7.099861016201429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd620b25c3a7%3A0x2265a276573909ae!2sEmp%C3%B3rio%20Sertanejo!5e0!3m2!1sen!2sbr!4v1706307931197!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
+        
+        <!--IMPORTAÇÃO DO ARQUIVO DE JAVASCRIPT-->
         <script src="www/js/index.js" defer="true"></script>
     </body>
 </html>

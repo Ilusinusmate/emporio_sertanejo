@@ -2,19 +2,30 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #121713;
+    background-color: #1f2029;
     overflow-x: hidden;
 }
 
+/**ESTILIZAÇÃO DA NAVBAR**/
 #neubar {
-    background-color: #192b1e;
+    background-color: #2a2b38;
     box-shadow: 4px 6px 12px rgba(140, 131, 131, 0.17);
 }
-  
+
+@media (max-width: 767px) {
+    #neubar .nav-item {
+      margin-bottom: 15px !important; 
+    }
+}
+
 .nav-item .active {
     border-radius: 6px;
-    background: linear-gradient(145deg, #1e3524, #185e1f);
+    background: linear-gradient(145deg, #a7ffbd, #a7ffbdab);
     box-shadow:  4px 4px 8px #d6d9d61c, -4px -4px 8px #24242400;
+}
+
+.nav-item .active:hover {
+    color: rgba(22, 20, 20) !important;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -22,33 +33,33 @@ body {
 }
 
 #neubar .nav-item {
-    margin : auto 4px;
+    margin: auto 4px;
 }
 
 #neubar a {
-    padding-left:12px;
-    padding-right:12px;
-}
-
-#neubar .dropdown-menu {
-    background : #f7f4f4;
-    transition: 0.5s;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 a.navbar-brand {
     color: #454545
 }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
-    color: rgba(255, 255, 255, 0.9);
-    transition: 0.2s;
-}
-
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(0, 0, 0, 0.7);
-    transition: 0.2s;
+    color: rgba(0, 0, 0, 0.7) !important;
+    transition: 0.2s !important;
 }
 
+#products {
+    color: white;
+}
+
+#products:hover {
+    transition: 0.2s;
+    color: rgb(22, 20, 20);
+}
+
+/**SELETOR DE CIDADES**/
 #cidade {
     background: none;
     border: none;
@@ -58,7 +69,7 @@ a.navbar-brand {
 }
 
 #cidade:hover {
-    color: rgba(14, 14, 14, 0.801);
+    color: rgba(22, 20, 20);
     transition: 0.2s;
 }
 
@@ -67,12 +78,36 @@ a.navbar-brand {
     transition: 0.2s;
 }
 
+/**SWITCH DE TEMA**/
 #css-mode {
     cursor: pointer;
 }
 
-@media (max-width: 767px) {
-    #neubar .nav-item {
-      margin-bottom: 15px; 
-    }
+/**SLIDER**/
+#mainSlider .carousel-caption {
+    top: 30%;
+}
+
+#mainSlider .carousel-caption h2 {
+    font-size: 4vw;
+    margin-bottom: 1em;
+}
+
+#mainSlider .carousel-caption p {
+    font-size: 3vw;
+    font-weight: 300;
+    margin-bottom: 100px;
+    color: #FFF;
+}
+
+.carousel-indicators .active {
+    background-color: #efc701;
+}
+
+.carousel-item h2 {
+  text-shadow: 3px 3px black;
+}
+
+.carousel-item p {
+  text-shadow: 3px 3px black;
 }
