@@ -2,6 +2,7 @@ API_URL = "https://emporio-sertanejo-api.onrender.com";
 
 const RegistBtn = document.getElementById("regist-btn");
 const LoginBtn = document.getElementById("login-btn");
+//const para descobrir qual o tema que a página se encontra (dark mode ou light mode)
 const CssMode = document.getElementById("css-mode");
 
 
@@ -70,7 +71,7 @@ RegistBtn.addEventListener("click", (e) => {
 })
 
 
-
+//função que troca o tema da página
 CssMode.addEventListener("click",  (e) => {
     let css = document.getElementById("css");
     let logo1 = document.getElementById("logo1");
@@ -91,7 +92,7 @@ CssMode.addEventListener("click",  (e) => {
 })
 
 
-
+//função para fazer o mascaramento de cpf no navegador dentro do input de cpf
 function CpfMask(input) {
     let cpfmasklength = input.value.length;
 

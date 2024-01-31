@@ -1,10 +1,13 @@
+//const para descobrir qual o tema que a página se encontra (dark mode ou light mode)
 const CssMode = document.getElementById("css-mode");
 
+//função para no carregamento da página ele já fazer a seleção correta para o mapa
 document.addEventListener("DOMContentLoaded", () => {
     cidade = document.getElementById("cidade");
     cidade.addEventListener("input", handleSelect);
 })
 
+//função que de fato carrega o mapa
 function handleSelect(ev) {
     let select = ev.target;
     let map = document.getElementById("map");
@@ -15,20 +18,25 @@ function handleSelect(ev) {
     }
 }
 
-
+//função que troca o tema da página
 CssMode.addEventListener("click",  (e) => {
     let css = document.getElementById("css");
     let logo = document.getElementById("logo");
     let img = document.getElementById("sun");
+    let nav = document.getElementById("neubar");
 
     if (css.getAttribute("href") === "www/css/index/lightindex.css") {
         css.setAttribute("href", "www/css/index/darkindex.css");
         logo.setAttribute("src", "www/img/logoemporio.png");
         img.setAttribute("src", "www/img/sun.png");
+        nav.classList.remove("navbar-light");
+        nav.classList.add("navbar-dark");
     } else if (css.getAttribute("href") === "www/css/index/darkindex.css") {
         css.setAttribute("href", "www/css/index/lightindex.css");
         logo.setAttribute("src", "www/img/logoemporiolight.png");
         img.setAttribute("src", "www/img/moon.png");
+        nav.classList.remove("navbar-dark");
+        nav.classList.add("navbar-light");
     };
 
 })

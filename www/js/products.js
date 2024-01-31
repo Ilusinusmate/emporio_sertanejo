@@ -1,7 +1,9 @@
 API_URL = "https://emporio-sertanejo-api.onrender.com"
 
+//const para descobrir qual o tema que a página se encontra (dark mode ou light mode)
 const CssMode = document.getElementById("css-mode");
 
+//função que troca o tema da página
 CssMode.addEventListener("click",  (e) => {
     let css = document.getElementById("css");
     let logo = document.getElementById("logo");
