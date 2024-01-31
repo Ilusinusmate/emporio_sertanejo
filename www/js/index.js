@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 //função que de fato carrega o mapa
-function handleSelect(ev) {
+async function handleSelect(ev) {
     let select = ev.target;
     let map = document.getElementById("map");
     if (select.value == "joaopessoa") {

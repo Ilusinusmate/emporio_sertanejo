@@ -47,6 +47,7 @@ a.navbar-brand {
 }
 
 #products {
+    transition: 0.2s;
     color: rgba(255, 255, 255, 0.856);
 }
 
@@ -98,9 +99,4 @@ a.navbar-brand {
 
 .carousel-indicators .active {
     background-color: #efc701;
-}
-
-.imageminicio {
-    width: 100%;
-    height: 100%;   
 }
