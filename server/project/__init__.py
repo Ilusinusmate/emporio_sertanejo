@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv("../../.env")
+load_dotenv("/etc/secrets/.env")
 SECRET_JWT_KEY = os.environ.get("SECRET_JWT_KEY")
 
 #   DEBBUGING
