@@ -164,7 +164,7 @@ class ProductQuery(BaseModel):
     name: str
     description: str
     price: PositiveFloat
-    image_link: str
+    image_link: Optional[str]
     
     class Config:
         from_atributes = True
