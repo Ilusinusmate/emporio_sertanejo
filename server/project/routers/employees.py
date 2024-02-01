@@ -4,11 +4,11 @@ from fastapi.security.oauth2 import OAuth2PasswordRequestForm
 from sqlalchemy.exc import IntegrityError
 from datetime import datetime
 
-from server.project import schemas
-from server.project.models import Employee, Session
-from server.project.database import get_db
-from server.project.utils import verify, hash
-from server.project.oauth2 import create_jwt_token
+from project import schemas
+from project.models import Employee, Session
+from project.database import get_db
+from project.utils import verify, hash
+from project.oauth2 import create_jwt_token
 
 router = APIRouter(
     prefix="/employee",

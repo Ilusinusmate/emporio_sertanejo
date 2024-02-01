@@ -4,10 +4,10 @@ from sqlalchemy.exc import IntegrityError
 from typing import List, Annotated, Optional
 import requests
 
-from server.project import schemas, IMAGE_API_KEY, IMAGE_API_URl
-from server.project.models import Product, Session
-from server.project.database import get_db
-from server.project.oauth2 import get_current_user
+from project import schemas, IMAGE_API_KEY, IMAGE_API_URl
+from project.models import Product, Session
+from project.database import get_db
+from project.oauth2 import get_current_user
 
 router = APIRouter(
     prefix="/products",

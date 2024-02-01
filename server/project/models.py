@@ -5,7 +5,7 @@ from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 import json
 
-from server.project import DATABASE_CONECTION
+from project import DATABASE_CONECTION
 
 
 Engine = create_engine(DATABASE_CONECTION)

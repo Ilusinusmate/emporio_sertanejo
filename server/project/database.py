@@ -1,4 +1,4 @@
-from server.project.models import Session
+from project.models import Session
 
 def get_db():
     try:

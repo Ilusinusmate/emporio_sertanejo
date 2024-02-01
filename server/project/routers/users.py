@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends
 from fastapi.exceptions import HTTPException
 from sqlalchemy.exc import IntegrityError
 
-from server.project import schemas
-from server.project.models import User, Session
-from server.project.database import get_db
-from server.project.utils import hash
+from project import schemas
+from project.models import User, Session
+from project.database import get_db
+from project.utils import hash
 
 
 router = APIRouter(

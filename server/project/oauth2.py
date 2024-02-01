@@ -4,10 +4,10 @@ from fastapi.exceptions import HTTPException
 from jose import JWTError, jwt
 from datetime import datetime
 
-from server.project import schemas
-from server.project.models import Session, User, Employee
-from server.project.database import get_db
-from server.project import SECRET_JWT_KEY, ALGORITHM, EXPIRATION_TIME
+from project import schemas
+from project.models import Session, User, Employee
+from project.database import get_db
+from project import SECRET_JWT_KEY, ALGORITHM, EXPIRATION_TIME
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='login')

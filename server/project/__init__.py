@@ -42,11 +42,11 @@ app.add_middleware(
 
 
 #   Inicializar projeto
-from server.project import models
-from server.project import schemas
-from server.project import database
-from server.project import utils
-from server.project import oauth2
+from project import models
+from project import schemas
+from project import database
+from project import utils
+from project import oauth2
 
 from .routers import users, auth, employees, products
 
