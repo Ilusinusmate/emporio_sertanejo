@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Integer, ForeignKey, Text, Float, JSON
+from sqlalchemy import Column, String, Integer, ForeignKey, Text, Float, JSON, Boolean, CheckConstraint, or_
 from sqlalchemy.engine import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy.sql.expression import text
@@ -24,11 +24,10 @@ class Product(Base):
     description = Column(Text, nullable=True)
     price = Column(Float, nullable=False)
     profit = Column(Float, nullable=False) 
-    stock = Column(JSON, default=json.dumps({
+    stock = Column(JSON, default={
         "quantity": 0,
         "type": "grams"
-    }))
-    image_link = Column(String, nullable=True, default=None)
+    })
     unit = Column(Integer, nullable=False)
     employee_registered = Column(String, ForeignKey("employees.cpf"), nullable=True)
     created_at = Column(TIMESTAMP(timezone=True),
@@ -61,9 +60,15 @@ class Purchase(Base):
     purchase = Column(JSON, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True),
                         nullable=False, server_default=text('CURRENT_TIMESTAMP'))
-    discount = Column(Float, default=0)
-    employee = Column(ForeignKey("employees.cpf"), nullable=True, default=None)
-    
+    discount = Column(Float, nullable=True,default=0)
+    employee_registered = Column(ForeignKey("employees.cpf"), nullable=True, default=None)
+    user_registered = Column(ForeignKey("users.cpf"), nullable=True, default=None)
+    unit = Column(Integer, nullable=False)
+    validated = Column(Boolean, default=False)
+    payment_method = Column(Integer, 
+                            check_constraints=[
+                                CheckConstraint('payment_method BETWEEN 0 AND 2', name='payment_method_check')
+                        ])
     
 class Income(Base):
     __tablename__ = "incomes"
