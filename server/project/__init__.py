@@ -28,9 +28,10 @@ from project import database
 from project import utils
 from project import oauth2
 
-from .routers import users, auth, employees, products
+from .routers import users, auth, employees, products, purchase
 
 app.include_router(users.router)
 app.include_router(auth.router)
 app.include_router(employees.router)
 app.include_router(products.router)
+app.include_router(purchase.router)

@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, Body
+from fastapi import APIRouter, Depends, Body, Query
 from fastapi.exceptions import HTTPException
 from sqlalchemy.exc import IntegrityError
 
@@ -12,7 +12,7 @@ router = APIRouter(
     tags=["Products"]
 )
 
-@router.post("/", response_model=schemas.ProductResponse)
+@router.post("/", response_model=schemas.ProductResponse, status_code=201)
 def register_product(
     data: schemas.ProductCreate = Body(),
     current_user = Depends(get_current_user),
@@ -32,6 +32,26 @@ def register_product(
         current_session.refresh(new_product)
         
         return new_product
+            
+    except HTTPException as e:
+        raise e
+    
+    except Exception as e:
+        raise HTTPException(detail=str(e), status_code=500)
+    
+@router.post("/consult", response_model=schemas.ConsultProductResponse)
+def consult_product(
+    data: schemas.ConsultProduct = Body(),
+    current_session: Session = Depends(get_db)
+) -> schemas.ConsultProductResponse:
+    
+    try:
+        
+        object = current_session.query(Product).filter_by(barcode=data.barcode, unit=data.unit).first()
+        if object is None:
+            raise HTTPException(detail="Barcode not registered in this unit", status_code=400)
+        
+        return object
             
     except HTTPException as e:
         raise e

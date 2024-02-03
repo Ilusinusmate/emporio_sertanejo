@@ -1,7 +1,7 @@
-from pydantic import BaseModel, constr, EmailStr, conint, PositiveInt, PositiveFloat
+from pydantic import BaseModel, constr, EmailStr, conint, PositiveInt, PositiveFloat, confloat
 from pydantic_br import CPFMask
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List
 
 
 #   USER SCHEMAS
@@ -29,6 +29,7 @@ class UserResponse(BaseModel):
     email: EmailStr
     
     class Config:
+        from_attributes = True
         json_schema_extra = {
             "example":{
                 "id": 1,
@@ -37,8 +38,6 @@ class UserResponse(BaseModel):
             }
         }
     
-    class Config:
-        from_attributes = True
         
 
 #   AUTH SCHEMAS
@@ -83,6 +82,7 @@ class EmployeeResponse(BaseModel):
     name: str
     cpf: CPFMask
     class Config:
+        from_attributes = True
         json_schema_extra = {
             "example":{
                 "name": "João Miguel",
@@ -99,12 +99,36 @@ class Stock(BaseModel):
     type: constr(strict=True, pattern=r"^(grams|units)$")
 
     class Config:
+        from_atributes = True
         json_schema_extra = {
             "example": {
                 "quantity": 100,
                 "type": "grams"
             }
         }
+        
+    
+
+class ConsultProduct(BaseModel):
+    barcode: constr(max_length=12, min_length=12) 
+    unit: conint(ge=0, le=2)
+    
+    class Config:
+        json_schema_extra = {
+            "example" : {
+                "barcode": "123456789123",
+                "unit": "1"
+            }
+        }
+        
+class ConsultProductResponse(BaseModel):
+    price: PositiveFloat
+    profit: PositiveFloat
+    name: str
+    description: str
+    stock: Stock
+    class Config:
+        from_attributes = True
 
 class ProductCreate(BaseModel):
     barcode: constr(max_length=12, min_length=12)
@@ -137,6 +161,7 @@ class ProductResponse(ProductCreate):
     created_at: datetime
     
     class Config:
+        from_attributes = True
         json_schema_extra = {
             "example": {
                 "id": 27,
@@ -155,3 +180,74 @@ class ProductResponse(ProductCreate):
             }
         }
     
+
+#   PURCHASE SCHEMAS
+
+
+class PurchaseUnit(BaseModel):
+    barcode: constr(min_length=12, max_length=12)
+    purchase: Stock
+    discount: confloat(ge=0, le=1)
+    user_registered: Optional[CPFMask]
+    unit: conint(ge=0, le=2)
+    payment_method: conint(ge=0, le=2)
+    class Config:
+        from_attributes=True
+        json_schema_extra = {
+            "example": {
+                "barcode": "123456789123",
+                "purchase": {
+                    "quantity": 10,
+                    "type": "grams"
+                },
+                "discount": 0,
+                "user_registered": "123.456.789-09",
+                "unit": 1,
+                "payment_method": 0
+            }
+        }
+
+class PurchaseHelper(BaseModel):
+    pass
+
+class PurchaseLot(BaseModel):
+    purchase: List[PurchaseHelper]
+    
+class PurchaseUnitResponse(BaseModel):
+    id: int
+    created_at: datetime
+    employee_registered: CPFMask
+    purchase: dict
+    discount: confloat(ge=0, le=1)
+    user_registered: Optional[CPFMask]
+    unit: conint(ge=0, le=2)
+    validated: bool
+    payment_method: conint(ge=0, le=2)
+    
+    class Config:
+        from_attributes = True
+    
+    
+class PurchaseLotResponse(PurchaseLot):
+    id: int
+    created_at: datetime
+    employee_registered: CPFMask
+    user_registered: CPFMask
+    discount: confloat(ge=0, le=1)
+    unit: conint(ge=0, le=2)
+    
+    class Config:
+        from_attributes = True
+        
+class PurchaseConsult(BaseModel):
+    id: int
+    created_at: datetime
+    employee_registered: CPFMask
+    purchase: dict
+    discount: confloat(ge=0, le=1)
+    user_registered: Optional[CPFMask]
+    unit: conint(ge=0, le=2)
+    validated: bool
+    payment_method: conint(ge=0, le=2)
+    class Config:
+        from_attributes = True
