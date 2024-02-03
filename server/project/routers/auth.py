@@ -31,7 +31,8 @@ def login_user(
             status_code=403, detail=f"Invalid Credentials")
     
     data={
-        "user_id" : user.id
+        "user_id" : user.id,
+        "role" : user.role        
     }
     
     jwt_token = create_jwt_token(data=data)

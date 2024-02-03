@@ -10,8 +10,8 @@ load_dotenv("/etc/secrets/.env")
 SECRET_JWT_KEY = os.environ.get("SECRET_JWT_KEY")
 
 #   DEBBUGING
-print("KEY:", SECRET_JWT_KEY)
-if SECRET_JWT_KEY is None: SECRET_JWT_KEY = "123123123"
+# print("KEY:", SECRET_JWT_KEY)
+# if SECRET_JWT_KEY is None: SECRET_JWT_KEY = "123123123"
     
 ALGORITHM = "HS256"
 EXPIRATION_TIME = timedelta(days=1)

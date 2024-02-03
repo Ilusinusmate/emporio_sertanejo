@@ -18,7 +18,7 @@ router = APIRouter(
 @router.get("/consult", response_model=schemas.PurchaseConsult)
 def consult_purchase(
     consult_id = Query(),
-    current_session: Session =Depends(get_db)
+    current_session: Session = Depends(get_db)
 ) -> schemas.PurchaseConsult:
     try:
         purchase = current_session.query(Purchase).filter_by(id=consult_id).first()       

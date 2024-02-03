@@ -44,14 +44,14 @@ class User(Base):
     password = Column(String, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True),
                         nullable=False, server_default=text('CURRENT_TIMESTAMP'))
-
+    role = Column(Integer, default=2)
 
 class Employee(Base):
     __tablename__ = "employees"
     cpf = Column(String(14), primary_key=True)
     password = Column(String, nullable=False)
     name = Column(String(40))
-    role = Column(Integer)
+    role = Column(Integer, default=1)
 
 
 class Purchase(Base):
@@ -65,10 +65,7 @@ class Purchase(Base):
     user_registered = Column(ForeignKey("users.cpf"), nullable=True, default=None)
     unit = Column(Integer, nullable=False)
     validated = Column(Boolean, default=False)
-    payment_method = Column(Integer, 
-                            check_constraints=[
-                                CheckConstraint('payment_method BETWEEN 0 AND 2', name='payment_method_check')
-                        ])
+    payment_method = Column(Integer)
     
 class Income(Base):
     __tablename__ = "incomes"
