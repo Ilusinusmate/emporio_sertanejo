@@ -1,5 +1,36 @@
 API_URL = "https://emporio-sertanejo-api.onrender.com";
 
+// primeira vez que a pessoa acessa a página
+if (localStorage.getItem("cssmode") === null) {
+    localStorage.setItem("cssmode", "light");
+};
+
+
+//const para acessar o valor de local storage que guarda o tema
+const cssmode = localStorage.getItem("cssmode");
+
+
+function startStyleMode(startstyle) {
+    let css = document.getElementById("css");
+    let logo1 = document.getElementById("logo1");
+    let logo2 = document.getElementById("logo2");
+    let img = document.getElementById("sun");
+
+    if (startstyle === "dark") {
+        css.setAttribute("href", "../css/login/darklogin.css");
+        logo1.setAttribute("src", "../img/logoemporio.png");
+        logo2.setAttribute("src", "../img/logoemporio.png");
+        img.setAttribute("src", "../img/sun.png");
+    } else if (startstyle === "light") {
+        css.setAttribute("href", "../css/login/lightlogin.css");
+        logo1.setAttribute("src", "../img/logoemporiolight.png");
+        logo2.setAttribute("src", "../img/logoemporiolight.png");
+        img.setAttribute("src", "../img/moon.png");
+    }
+}
+
+startStyleMode(cssmode);
+
 const RegistBtn = document.getElementById("regist-btn");
 const LoginBtn = document.getElementById("login-btn");
 //const para descobrir qual o tema que a página se encontra (dark mode ou light mode)
@@ -83,11 +114,13 @@ CssMode.addEventListener("click",  (e) => {
         logo1.setAttribute("src", "../img/logoemporio.png");
         logo2.setAttribute("src", "../img/logoemporio.png");
         img.setAttribute("src", "../img/sun.png");
+        localStorage.setItem("cssmode", "dark");
     } else if (css.getAttribute("href") === "../css/login/darklogin.css") {
         css.setAttribute("href", "../css/login/lightlogin.css");
         logo1.setAttribute("src", "../img/logoemporiolight.png");
         logo2.setAttribute("src", "../img/logoemporiolight.png");
         img.setAttribute("src", "../img/moon.png");
+        localStorage.setItem("cssmode", "light");
     };
 })
 

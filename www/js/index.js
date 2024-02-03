@@ -1,5 +1,38 @@
-//const para descobrir qual o tema que a página se encontra (dark mode ou light mode)
+// primeira vez que a pessoa acessa a página 
+if (localStorage.getItem("cssmode") === null) {
+    localStorage.setItem("cssmode", "light");
+};
+
+//const para acessar o botão que troca o tema (dark mode ou light mode)
 const CssMode = document.getElementById("css-mode");
+//const para acessar o valor de local storage que guarda o tema
+const stylemode = localStorage.getItem("cssmode");
+
+
+//função que carrega o elemento da local storage
+function startStyleMode(stylemode) {
+    let css = document.getElementById("css");
+    let logo = document.getElementById("logo");
+    let img = document.getElementById("sun");
+    let nav = document.getElementById("neubar");
+
+    if (stylemode === "dark") {
+        css.setAttribute("href", "www/css/index/darkindex.css");
+        logo.setAttribute("src", "www/img/logoemporio.png");
+        img.setAttribute("src", "www/img/sun.png");
+        nav.classList.remove("navbar-light");
+        nav.classList.add("navbar-dark");
+    } else if (stylemode === "light") {
+        css.setAttribute("href", "www/css/index/lightindex.css");
+        logo.setAttribute("src", "www/img/logoemporiolight.png");
+        img.setAttribute("src", "www/img/moon.png");
+        nav.classList.remove("navbar-dark");
+        nav.classList.add("navbar-light");
+    }
+}
+
+startStyleMode(stylemode);
+
 
 //função para no carregamento da página ele já fazer a seleção correta para o mapa
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,25 +51,28 @@ async function handleSelect(ev) {
     }
 }
 
+
 //função que troca o tema da página
 CssMode.addEventListener("click",  (e) => {
+    const mode = localStorage.getItem("cssmode");
     let css = document.getElementById("css");
     let logo = document.getElementById("logo");
     let img = document.getElementById("sun");
     let nav = document.getElementById("neubar");
 
-    if (css.getAttribute("href") === "www/css/index/lightindex.css") {
+    if (mode === "light") {
         css.setAttribute("href", "www/css/index/darkindex.css");
         logo.setAttribute("src", "www/img/logoemporio.png");
         img.setAttribute("src", "www/img/sun.png");
         nav.classList.remove("navbar-light");
         nav.classList.add("navbar-dark");
-    } else if (css.getAttribute("href") === "www/css/index/darkindex.css") {
+        localStorage.setItem("cssmode", "dark")
+    } else if (mode === "dark") {
         css.setAttribute("href", "www/css/index/lightindex.css");
         logo.setAttribute("src", "www/img/logoemporiolight.png");
         img.setAttribute("src", "www/img/moon.png");
         nav.classList.remove("navbar-dark");
         nav.classList.add("navbar-light");
+        localStorage.setItem("cssmode", "light")
     };
-
 })
