@@ -49,7 +49,7 @@ class Token(BaseModel):
     created_at: datetime
 
 class TokenData(BaseModel):
-    id : Optional[str | int] = None
+    id : Optional[CPFMask | int] = None
     
     
 #   EMPLOYEE SCHEMA

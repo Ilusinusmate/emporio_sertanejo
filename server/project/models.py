@@ -32,7 +32,7 @@ class Product(Base):
     employee_registered = Column(String, ForeignKey("employees.cpf"), nullable=True)
     created_at = Column(TIMESTAMP(timezone=True),
                         nullable=False, server_default=text('CURRENT_TIMESTAMP'))
-    
+    image_link = Column(String, default=None, nullable=True)
     
 class User(Base):
     __tablename__ = "users"

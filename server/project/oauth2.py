@@ -47,11 +47,34 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
 
     token = verify_access_token(token, credentials_exception)
 
-    user = db.query(User).filter(User.id == token.id).first()
-    if user is None:
-        user = db.query(Employee).filter(Employee.cpf == token.id).first()
+    if isinstance(token.id, str):
+        user = db.query(Employee).filter_by(cpf=token.id).first()
+    else:
+        user = db.query(User).filter_by(id=token.id).first()
+        
     if user is None:
         raise HTTPException(detail="Credentials does not match database", status_code=400)
-    
-    
+           
     return user
+
+
+def is_authorized(auth_level:set or str, user_role):
+    
+    authorization_groups = {
+        "admin" : {0},
+        "employee" : {0, 1},
+        "user" : {0, 1, 2}
+    }
+    
+    if isinstance(auth_level, str):
+        query = authorization_groups.get(auth_level, None)
+        
+        if query is None:
+            raise HTTPException(detail=f"auth_level: {auth_level} does not match any role.", status_code=500)
+        
+        if user_role in query:
+            return True
+        
+        return False
+    
+    return user_role in auth_level

@@ -7,7 +7,7 @@ from datetime import datetime
 from project import schemas
 from project.models import Product, Purchase, Session
 from project.database import get_db
-from project.oauth2 import get_current_user
+from project.oauth2 import get_current_user, is_authorized
 
 
 router = APIRouter(
@@ -20,7 +20,9 @@ def consult_purchase(
     consult_id = Query(),
     current_session: Session = Depends(get_db)
 ) -> schemas.PurchaseConsult:
+    
     try:
+        
         purchase = current_session.query(Purchase).filter_by(id=consult_id).first()       
 
         return purchase
@@ -40,9 +42,14 @@ def purchase_unit(
     
 ) -> schemas.PurchaseUnitResponse:
     
-    try:
+    try:  
         
-        #   VALIDATIONS
+        #   AUTHORIZATION      
+        
+        if not is_authorized("employee", current_user.role):
+            raise HTTPException(detail="Not authorizated to realese this action", status_code=401)
+        
+        #   VALIDATIONS     
         
         product = current_session.query(Product).filter_by(barcode=data.barcode, unit=data.unit).first()   
         
