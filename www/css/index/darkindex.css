@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     background-color: #1f2029;
     overflow-x: hidden;
 }
@@ -18,6 +16,10 @@ body {
     }
 }
 
+.nav-item {
+    font-size: 18px;
+}
+
 .nav-item .active {
     border-radius: 6px;
     color: white !important;
@@ -26,6 +28,7 @@ body {
 }
 
 .nav-item .active:hover {
+    transition: 0.5s;
     color: rgba(22, 20, 20) !important;
 }
 
@@ -47,13 +50,30 @@ a.navbar-brand {
 }
 
 #products {
-    transition: 0.2s;
+    transition: 0.5s;
     color: rgba(255, 255, 255, 0.856);
+    position: relative;
 }
 
 #products:hover {
-    transition: 0.2s;
+    transition: 0.5s;
     color: rgba(148, 141, 141, 0.712) !important;
+}
+
+#products::after {
+    border-radius: 10%;
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: #a7ffbda3;
+    position: absolute;
+    left: 10;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+}
+
+#products:hover::after {
+    width: 80%;
 }
 
 /**SELETOR DE CIDADES**/
@@ -61,18 +81,38 @@ a.navbar-brand {
     background: none;
     border: none;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.5s;
     color: rgba(255, 255, 255, 0.856);
 }
 
 #cidade:hover {
     color: rgba(148, 141, 141, 0.712);
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 #cidade:focus {
     color: rgba(0, 0, 0, 0.856);
-    transition: 0.2s;
+    transition: 0.5s;
+}
+
+#teste {
+    position: relative;
+}
+
+#teste::after {
+    border-radius: 10%;
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: #a7ffbda3;
+    position: absolute;
+    left: 14;
+    top: 32.5;
+    transition: 0.5s ease-in-out;
+}
+
+#teste:hover::after {
+    width: 80%;
 }
 
 /**SWITCH DE TEMA**/
@@ -81,6 +121,10 @@ a.navbar-brand {
 }
 
 /**SLIDER**/
+#mainSlider {
+    font-family: 'Oswald', sans-serif;
+}
+
 #mainSlider .carousel-caption {
     top: 30%;
 }
@@ -90,13 +134,28 @@ a.navbar-brand {
     margin-bottom: 1em;
 }
 
+.tituloSlider {
+    color: black;
+}
+
 #mainSlider .carousel-caption p {
     font-size: 3vw;
     font-weight: 300;
     margin-bottom: 100px;
-    color: #FFF;
+    color: black;
 }
 
 .carousel-indicators .active {
     background-color: #efc701;
+}
+
+.main-title {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+hr {
+    border-top: 0.5px solid rgba(15, 15, 15, 0.425);
 }

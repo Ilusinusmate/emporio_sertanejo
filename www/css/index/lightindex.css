@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     overflow-x: hidden;
     background-color: #dbdbdb;
 }
@@ -17,6 +15,10 @@ body {
     #neubar .nav-item {
       margin-bottom: 15px !important; 
     }
+}
+
+.nav-item {
+    font-size: 18px;
 }
 
 .nav-item .active {
@@ -44,13 +46,34 @@ body {
     transition: 0.5s;
 }
 
+#products {
+    transition: 0.5s;
+    position: relative;
+}
+
+#products::after {
+    border-radius: 10%;
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: #e44e13fa;
+    position: absolute;
+    left: 10;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+}
+
+#products:hover::after {
+    width: 80%;
+}
+
 .navbar-light .navbar-nav .nav-link {
     color: black;
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: rgb(163, 163, 163);
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 /**SELETOR DE CIDADES**/
@@ -58,20 +81,39 @@ body {
     color: black;
     background: none;
     border: none;
-    transition: 0.2s;
+    transition: 0.5s;
     cursor: pointer;
 }
 
 #cidade:hover {
     color: rgb(163, 163, 163);
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 #cidade:focus {
     color: black;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
+#teste {
+    position: relative;
+}
+
+#teste::after {
+    border-radius: 10%;
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: #e44e13fa;
+    position: absolute;
+    left: 14;
+    top: 32.5;
+    transition: 0.5s ease-in-out;
+}
+
+#teste:hover::after {
+    width: 80%;
+}
 /**SWITCH DE TEMA**/
 #css-mode {
     cursor: pointer;
@@ -96,4 +138,10 @@ body {
 
 .carousel-indicators .active {
     background-color: #efc701;
+}
+
+.main-title {
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
 }
