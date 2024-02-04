@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
-body{
+body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
 	overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
     background-color: #dbdbdb;
 }
 
@@ -264,4 +266,76 @@ h6 span{
 #sun {
     width: 35px;
     height: 35px;
+}.main-login {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    margin-top: 4%;
+    font-family: 'Titillium Web', sans-serif;
+    width: 25vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.left-login > h1 {
+    color: #f07d5a;
+    text-align: center;
+    font-family: 'Protest Riot', sans-serif;
+}
+
+.right-login {
+    width: 75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login-image {
+    width: 40vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 75vw;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-front {
+        width: 85%;
+        left: 30;
+    }
+    .card-back {
+        left: 30;
+        width: 85%;
+    }
 }

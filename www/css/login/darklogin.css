@@ -8,6 +8,8 @@ body{
     overflow-x: hidden;
     background-color: #1f2029;
     color: #d2d0d8;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 /**CARD DE FORMULÁRIO**/
@@ -19,12 +21,6 @@ h6 span{
     padding: 0 20px;
     text-transform: uppercase;
     font-weight: 700;
-}
-
-.section{
-    position: relative;
-    width: 100%;
-    display: block;
 }
 
 /**ESTILIZAÇÃO DOS FORMATOS DO CARTÃO DE FORM**/
@@ -278,4 +274,77 @@ h6 span{
 #sun {
     width: 35px;
     height: 35px;
+}
+
+.main-login {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    margin-top: 4%;
+    font-family: 'Titillium Web', sans-serif;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.left-login > h1 {
+    color: #a7ffbd;
+    text-align: center;
+    font-family: 'Protest Riot', sans-serif;
+}
+
+.right-login {
+    width: 75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login-image {
+    width: 40vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 75vw;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-front {
+        width: 85%;
+        left: 30;
+    }
+    .card-back {
+        left: 30;
+        width: 85%;
+    }
 }
