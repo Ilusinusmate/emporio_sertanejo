@@ -15,17 +15,20 @@ function startStyleMode(stylemode) {
     let logo = document.getElementById("logo");
     let img = document.getElementById("sun");
     let nav = document.getElementById("neubar");
+    let logo1 = document.getElementById("logo1");
 
     if (stylemode === "dark") {
         css.setAttribute("href", "www/css/index/darkindex.css");
         logo.setAttribute("src", "www/img/logoemporio.png");
         img.setAttribute("src", "www/img/sun.png");
+        logo1.setAttribute("src", "www/img/logoemporio.png")
         nav.classList.remove("navbar-light");
         nav.classList.add("navbar-dark");
     } else if (stylemode === "light") {
         css.setAttribute("href", "www/css/index/lightindex.css");
         logo.setAttribute("src", "www/img/logoemporiolight.png");
         img.setAttribute("src", "www/img/moon.png");
+        logo1.setAttribute("src", "www/img/logoemporiolight.png")
         nav.classList.remove("navbar-dark");
         nav.classList.add("navbar-light");
     }
@@ -59,11 +62,13 @@ CssMode.addEventListener("click",  (e) => {
     let logo = document.getElementById("logo");
     let img = document.getElementById("sun");
     let nav = document.getElementById("neubar");
+    let logo1 = document.getElementById("logo1");
 
     if (mode === "light") {
         css.setAttribute("href", "www/css/index/darkindex.css");
         logo.setAttribute("src", "www/img/logoemporio.png");
         img.setAttribute("src", "www/img/sun.png");
+        logo1.setAttribute("src", "www/img/logoemporio.png")
         nav.classList.remove("navbar-light");
         nav.classList.add("navbar-dark");
         localStorage.setItem("cssmode", "dark")
@@ -71,6 +76,7 @@ CssMode.addEventListener("click",  (e) => {
         css.setAttribute("href", "www/css/index/lightindex.css");
         logo.setAttribute("src", "www/img/logoemporiolight.png");
         img.setAttribute("src", "www/img/moon.png");
+        logo1.setAttribute("src", "www/img/logoemporiolight.png")
         nav.classList.remove("navbar-dark");
         nav.classList.add("navbar-light");
         localStorage.setItem("cssmode", "light")

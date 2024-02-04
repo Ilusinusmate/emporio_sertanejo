@@ -174,7 +174,7 @@ a.navbar-brand {
 }
 
 .carousel-indicators .active {
-    background-color: #efc701;
+    background-color: #a7ffbda3;
 }
 
 .main-title {
@@ -187,7 +187,6 @@ a.navbar-brand {
 hr {
     border-top: 0.5px solid rgba(15, 15, 15, 0.425);
 }
-
 
 .footer-dark {
     padding: 50px 0;
@@ -231,10 +230,6 @@ hr {
     opacity: 0.6;
     margin-bottom: 0;
 }
-  
-.footer-dark .item.social {
-    text-align: center;
-}
 
 .footer-dark .item.social > a {
     font-size: 20px;
@@ -264,7 +259,6 @@ hr {
   
 .footer-dark .copyright {
     text-align: center;
-    padding-top: 24px;
     opacity: 0.5;
     font-size: 13px;
     margin-bottom: 0;
@@ -297,4 +291,43 @@ i {
 .footer-dark h3 {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
+}
+
+#logo1 {
+    transform: translateY(-20px);
+}
+
+#texto-logo {
+    transform: translateY(-20px);
+}
+
+.about-title {
+    font-size: 25px;
+    color: #ffffff !important;
+    font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500 !important;
+}
+
+#about-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about-list li {
+    line-height: 30px;
+}
+
+#about-list i {
+    color: #a7ffbda3;
+    margin-right: 15px;
+}
+
+.texto {
+    font-family: 'Kanit', sans-serif;
+    color: white;
+}
+
+.img-fluid {
+    max-width: 95%;
 }
