@@ -311,32 +311,36 @@ a:link,a:active,a:visited,a:hover{
 	color:#3f51b5;
 }
 
-.outerdiv
-{
+.outerdiv {
 	width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.innerdiv
-{
+
+.innerdiv {
 	transform: scale(0.9);
-	margin: 1rem;
 	display: grid;
 	grid-gap: 1.5rem;
 	grid-template-rows: repeat(2,22rem);
 	grid-template-columns: repeat(4,17rem);
 }
-.eachdiv
-{
+
+.eachdiv {
 	padding: 1rem 2rem;
     border-radius: 0.8rem;
-    box-shadow: 5px 5px 20px #6d6b6b6b;
+    box-shadow: 5px 5px 20px #0000006b;
+    transition: 0.5s;
     color: white;
 }
-.div1
-{
+
+.eachdiv:hover {
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+
+.div1 {
 	background: #733FC8;
     grid-column: 1/3;
     grid-row: 1/2;
@@ -344,101 +348,103 @@ a:link,a:active,a:visited,a:hover{
     background-repeat: no-repeat;
     background-position-x: 25rem;
 }
-.div2
-{
-	background:#49556B;
+
+.div2 {
+	background:#e44e13fa;
     grid-column: 3/4;
     grid-row: 1/2;
 }
-.div3
-{
-	background: white;
+
+.div3 {
+	background: #a7ffbda3;
     grid-column: 4/5;
     grid-row: 1/3;
     color: black;
 }
-.div4
-{
+
+.div4 {
 	background: white;
 	grid-column: 1/2;
     grid-row: 2/3;
     color: black;
 }
-.div5
-{
+
+.div5 {
 	background: #18202D;
 	grid-column: 2/4;
     grid-row: 2/3;
 }
-.userdetails
-{
+
+.userdetails {
 	display: flex;
 }
-.imgbox
-{
+
+.imgbox {
 	margin-right: 1rem;
 }
-.imgbox img
-{
+
+.imgbox img {
 	border-radius: 50%;
 	width: 2rem;
 	border: 2px solid #cec5c5;
 }
-.detbox
-{
+
+.detbox {
 	display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.detbox p
-{
+
+.detbox p {
 	margin: 0;
 }
-.detbox .name
-{
+
+.detbox .name {
 	color: hsl(0, 0%, 81%);
     font-size: 0.9rem;
     margin-bottom: 0.1rem;
     font-weight: 600;
 }
-.detbox .name.dark
-{
+
+.detbox .name.dark {
 	color: #49505A;
 }
-.detbox .designation
-{
+
+.detbox .designation {
 	color: hsl(0, 0%, 81%);
     opacity: 50%;
     font-size: 0.8rem;
 }
-.detbox .designation.dark
-{
+
+.detbox .designation.dark {
 	color: #49505A;
 }
-.review h4
-{
+
+.review h4 {
 	font-size: 1.4rem;
 	color: #F3DEFF;
     font-weight: 600;
     line-height: 1.5;
     margin-bottom: 0.8rem;
 }
-.review.dark h4{
+
+.review.dark h4 {
 	color:#4B5258;
 }
-.review p
-{
+
+.review p {
 	font-size: 0.95rem;
     color: #F3DEFF;
     font-weight: 500;
     opacity: 50%;
     line-height: 1.5;
 }
-.review.dark p{
+
+.review.dark p {
 	color: #0e0e0e;
 }
-.attribution
-{
+
+.attribution {
 	font-size: 1rem;
     line-height: 1.5;
     position: fixed;
@@ -446,40 +452,37 @@ a:link,a:active,a:visited,a:hover{
     right: 1rem;
     text-align: right;
 }
-.attribution a
-{
+
+.attribution a {
 	text-decoration: none;
 }
 
-@media only screen and (max-width: 1000px)
-{
-	.innerdiv
-	{
+@media only screen and (max-width: 1000px) {
+	.innerdiv {
 		transform: scale(0.7);
 	}
 }
-@media only screen and (max-width: 800px)
-{
-	.innerdiv
-	{
+
+@media only screen and (max-width: 800px) {
+	.innerdiv {
 		transform: scale(0.6);
 	}
 }
-@media only screen and (max-width: 600px)
-{
+
+@media only screen and (max-width: 600px) {
 	.div1 {
 		background-position-x: 10rem;
 	}
-	.innerdiv
-	{
+
+	.innerdiv {
 		display: flex; 
 		flex-direction: column;
 		transform: scale(1);
 		margin: 2rem;
 		margin-bottom: 5rem;
 	}
-	.attribution
-	{
+
+	.attribution {
 		position: relative;
 	}
 }

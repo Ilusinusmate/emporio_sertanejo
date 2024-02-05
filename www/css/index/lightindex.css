@@ -303,7 +303,7 @@ a:link,a:active,a:visited,a:hover{
 
 .outerdiv {
 	width: 100%;
-    min-height: 50vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -340,7 +340,7 @@ a:link,a:active,a:visited,a:hover{
 }
 
 .div2 {
-	background:#49556B;
+	background:#e44e13fa;
     grid-column: 3/4;
     grid-row: 1/2;
 }
@@ -353,10 +353,10 @@ a:link,a:active,a:visited,a:hover{
 }
 
 .div4 {
-	background: white;
+	background: #a7ffbda3;
 	grid-column: 1/2;
     grid-row: 2/3;
-    color: black;
+    color: white !important;
 }
 
 .div5 {
