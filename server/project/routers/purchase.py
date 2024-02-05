@@ -114,4 +114,3 @@ def purchase_unit(
         current_session.rollback()
         raise HTTPException(detail=str(e), status_code=500)
     
-      

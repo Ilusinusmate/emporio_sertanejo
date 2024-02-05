@@ -265,4 +265,3 @@ class PurchaseConsult(BaseModel):
     payment_method: conint(ge=0, le=2)
     class Config:
         from_attributes = True
-
