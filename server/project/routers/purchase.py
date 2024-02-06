@@ -62,7 +62,7 @@ def purchase_unit(
             raise HTTPException(
                 detail="Informed types incorret. It must be 'grams' or 'units' and equal in purchase and stock",
                 status_code=400
-            )
+            )                          
             
         if product.stock["quantity"] <= data.purchase["quantity"]:
             raise HTTPException(
@@ -73,6 +73,7 @@ def purchase_unit(
         #   PREPARATION TO DATABASE CHANGES
             
         value = data.purchase["quantity"]
+        total_price = value * product.price
             
         purchase = {data.barcode:data.purchase}
         del data.purchase
@@ -87,7 +88,7 @@ def purchase_unit(
             case _: 
                 validated=True
                 product.stock = {
-                     "quantity": product.stock["quantity"] - value,
+                    "quantity": product.stock["quantity"] - value,
                     "type": product.stock["type"]
                 }
         
@@ -97,7 +98,8 @@ def purchase_unit(
             **data.dict(),
             employee_registered=current_user.cpf,
             purchase=purchase,
-            validated=validated
+            validated=validated,
+            total_price=total_price
         )
         
         current_session.add(new_purchase)
