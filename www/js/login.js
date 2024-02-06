@@ -15,17 +15,20 @@ function startStyleMode(startstyle) {
     let logo1 = document.getElementById("logo1");
     let logo2 = document.getElementById("logo2");
     let img = document.getElementById("sun");
+    let planta = document.getElementById("planta");
 
     if (startstyle === "dark") {
         css.setAttribute("href", "../css/login/darklogin.css");
         logo1.setAttribute("src", "../img/logoemporio.png");
         logo2.setAttribute("src", "../img/logoemporio.png");
         img.setAttribute("src", "../img/sun.png");
+        planta.setAttribute("src", "../img/plantadark.svg")
     } else if (startstyle === "light") {
         css.setAttribute("href", "../css/login/lightlogin.css");
         logo1.setAttribute("src", "../img/logoemporiolight.png");
         logo2.setAttribute("src", "../img/logoemporiolight.png");
         img.setAttribute("src", "../img/moon.png");
+        planta.setAttribute("src", "../img/plantalight.svg")
     }
 }
 
@@ -108,18 +111,21 @@ CssMode.addEventListener("click",  (e) => {
     let logo1 = document.getElementById("logo1");
     let logo2 = document.getElementById("logo2");
     let img = document.getElementById("sun");
+    let planta = document.getElementById("planta");
 
     if (css.getAttribute("href") === "../css/login/lightlogin.css") {
         css.setAttribute("href", "../css/login/darklogin.css");
         logo1.setAttribute("src", "../img/logoemporio.png");
         logo2.setAttribute("src", "../img/logoemporio.png");
         img.setAttribute("src", "../img/sun.png");
+        planta.setAttribute("src", "../img/plantadark.svg")
         localStorage.setItem("cssmode", "dark");
     } else if (css.getAttribute("href") === "../css/login/darklogin.css") {
         css.setAttribute("href", "../css/login/lightlogin.css");
         logo1.setAttribute("src", "../img/logoemporiolight.png");
         logo2.setAttribute("src", "../img/logoemporiolight.png");
         img.setAttribute("src", "../img/moon.png");
+        planta.setAttribute("src", "../img/plantalight.svg")
         localStorage.setItem("cssmode", "light");
     };
 })
