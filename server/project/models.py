@@ -66,6 +66,8 @@ class Purchase(Base):
     unit = Column(Integer, nullable=False)
     validated = Column(Boolean, default=False)
     payment_method = Column(Integer)
+    total_price = Column(Float, nullable=False)
+    
     
 class Income(Base):
     __tablename__ = "incomes"

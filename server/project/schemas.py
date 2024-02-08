@@ -237,6 +237,7 @@ class PurchaseUnitResponse(BaseModel):
     unit: conint(ge=0, le=2)
     validated: bool
     payment_method: conint(ge=0, le=2)
+    total_price: PositiveFloat
     
     class Config:
         from_attributes = True
