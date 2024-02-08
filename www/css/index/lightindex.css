@@ -29,13 +29,13 @@ body {
         height: 3px;
         background-color: #e44e13fa;
         position: absolute;
-        left: 145 !important;
+        left: 115 !important;
         bottom: 0 !important;
         transition: 0.5s ease-in-out;
     }
     
     #products:hover::after {
-        width: 21.5% !important;
+        width: 24.5% !important;
     }
 
     .footer-dark .item.text {
@@ -445,15 +445,43 @@ a:link,a:active,a:visited,a:hover{
 	text-decoration: none;
 }
 
+@media only screen and (max-width: 1100px) {
+    .outerdiv {
+        height: 65vw;
+    }
+    .innerdiv {
+		transform: scale(0.8) translateY(-30px);
+	}
+}
+
+
 @media only screen and (max-width: 1000px) {
-	.innerdiv {
-		transform: scale(0.7);
+    .outerdiv {
+        height: 65vw;
+    }
+    .innerdiv {
+		transform: scale(0.7) translateY(-30px);
 	}
 }
 
 @media only screen and (max-width: 800px) {
+    .outerdiv {
+        height: 60vw;
+    }
+
 	.innerdiv {
-		transform: scale(0.6);
+		transform: scale(0.6) translateY(-30px);
+	}
+}
+
+@media only screen and (max-width: 650px) {
+    .outerdiv {
+        min-height: 0;
+        height: 60vw;
+    }
+
+	.innerdiv {
+		transform: scale(0.5) translateY(-30px);
 	}
 }
 
@@ -461,6 +489,10 @@ a:link,a:active,a:visited,a:hover{
 	.div1 {
 		background-position-x: 10rem;
 	}
+
+    .outerdiv {
+        height: auto;
+    }
 
 	.innerdiv {
 		display: flex; 

@@ -34,13 +34,13 @@ body {
         height: 3px;
         background-color: #a7ffbda3 !important;
         position: absolute;
-        left: 145 !important;
+        left: 115 !important;
         bottom: 0 !important;
         transition: 0.5s ease-in-out;
     }
     
     #products:hover::after {
-        width: 21.5% !important;
+        width: 24.5% !important;
     }
     
     .footer-dark .item:not(.social) {
@@ -455,6 +455,7 @@ a:link,a:active,a:visited,a:hover{
 .attribution a {
 	text-decoration: none;
 }
+
 @media only screen and (max-width: 1100px) {
     .outerdiv {
         height: 65vw;
