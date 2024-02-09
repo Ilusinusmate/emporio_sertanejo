@@ -303,14 +303,13 @@ a:link,a:active,a:visited,a:hover{
 
 .outerdiv {
 	width: 100%;
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .innerdiv {
-	transform: scale(0.9);
+	transform: translateY(-1em);
 	display: grid;
 	grid-gap: 1.5rem;
 	grid-template-rows: repeat(2,22rem);
@@ -320,7 +319,7 @@ a:link,a:active,a:visited,a:hover{
 .eachdiv {
 	padding: 1rem 2rem;
     border-radius: 0.8rem;
-    box-shadow: 5px 5px 20px #6d6b6b6b;
+    box-shadow: 5px 5px 20px #0000006b;
     transition: 0.5s;
     color: white;
 }
@@ -346,17 +345,17 @@ a:link,a:active,a:visited,a:hover{
 }
 
 .div3 {
-	background: white;
+	background: #a7ffbda3;
     grid-column: 4/5;
     grid-row: 1/3;
     color: black;
 }
 
 .div4 {
-	background: #a7ffbda3;
+	background: white;
 	grid-column: 1/2;
     grid-row: 2/3;
-    color: white !important;
+    color: black;
 }
 
 .div5 {
@@ -364,6 +363,7 @@ a:link,a:active,a:visited,a:hover{
 	grid-column: 2/4;
     grid-row: 2/3;
 }
+
 .userdetails {
 	display: flex;
 }
@@ -398,6 +398,7 @@ a:link,a:active,a:visited,a:hover{
 .detbox .name.dark {
 	color: #49505A;
 }
+
 .detbox .designation {
 	color: hsl(0, 0%, 81%);
     opacity: 50%;
@@ -476,7 +477,6 @@ a:link,a:active,a:visited,a:hover{
 
 @media only screen and (max-width: 650px) {
     .outerdiv {
-        min-height: 0;
         height: 60vw;
     }
 
