@@ -138,6 +138,67 @@ body {
     position: relative;
 }
 
+@media only screen and (max-width: 767px) {
+    #cidade {
+        transform: translateY(20.5px);
+    }
+    
+    #teste::after {
+        border-radius: 10%;
+        content: " ";
+        width: 0%;
+        height: 3px;
+        background-color: #e44e13fa;
+        position: absolute;
+        left: 14;
+        top: 52 !important;
+        transition: 0.5s ease-in-out;
+    }
+    
+    #teste:hover::after {
+        width: 87% !important;
+    }
+
+    #products::after {
+        border-radius: 10%;
+        content: " ";
+        width: 0%;
+        height: 3px;
+        background-color: #e44e13fa;
+        position: absolute;
+        left: 10 !important;
+        bottom: 0;
+        transition: 0.5s ease-in-out;
+    }
+    
+    #products:hover::after {
+        width: 80% !important;
+    }    
+}
+
+@media only screen and (max-width: 575px) {
+    #cidade {
+        transform: translateY(0);
+    }
+
+    #teste::after {
+        left: 10% !important;
+        top: 32 !important;
+    }
+    
+    #teste:hover::after {
+        width: 78% !important;
+    }
+
+    #products::after {
+        left: 41% !important;
+    }
+    
+    #products:hover::after {
+        width: 18% !important;
+    }    
+}
+
 #teste::after {
     border-radius: 10%;
     content: " ";

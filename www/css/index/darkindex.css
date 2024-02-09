@@ -121,6 +121,51 @@ a.navbar-brand {
     width: 80%;
 }
 
+@media only screen and (max-width: 767px) {
+    #cidade {
+        transform: translateY(20.5px);
+    }
+    
+    #teste::after {
+        top: 52 !important;
+    }
+    
+    #teste:hover::after {
+        width: 87% !important;
+    }
+
+    #products::after {
+        left: 10 !important;
+    }
+    
+    #products:hover::after {
+        width: 80% !important;
+    }    
+}
+
+@media only screen and (max-width: 575px) {
+    #cidade {
+        transform: translateY(0);
+    }
+
+    #teste::after {
+        left: 10% !important;
+        top: 32 !important;
+    }
+    
+    #teste:hover::after {
+        width: 78% !important;
+    }
+
+    #products::after {
+        left: 41% !important;
+    }
+    
+    #products:hover::after {
+        width: 18% !important;
+    }    
+}
+
 /**SELETOR DE CIDADES**/
 #cidade {
     background: none;
