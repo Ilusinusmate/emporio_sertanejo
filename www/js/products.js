@@ -1,5 +1,6 @@
 API_URL = "https://emporio-sertanejo-api.onrender.com"
 
+
 // primeira vez que a pessoa acessa a página
 if (localStorage.getItem("cssmode") === null) {
     localStorage.setItem("cssmode", "light");

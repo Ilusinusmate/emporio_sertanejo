@@ -3,20 +3,49 @@
     <head>
         <!--DEFINIÇÃO DE CHARSET E ESCALA-->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0">
         <!--DEFINIÇÃO DO TÍTULO-->
-        <title>Empório Sertanejo - Login</title>
+        <title>
+            Empório Sertanejo - Login
+        </title>
         <!--DEFINIÇÃO DO FAVICON-->
-        <link rel="shortcut icon" href="../img/favicon.ico" />
+        <link 
+        rel="shortcut icon" 
+        href="../img/favicon.ico" />
         <!--IMPORTAÇÃO DO BOOTSTRAP-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet"> 
+        <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+        <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous">
+        </script>
+        <link 
+        rel="preconnect" 
+        href="https://fonts.googleapis.com">
+        <link 
+        rel="preconnect" 
+        href="https://fonts.gstatic.com" 
+        crossorigin> 
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Abel&display=swap" 
+        rel="stylesheet"> 
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" 
+        rel="stylesheet"> 
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" 
+        rel="stylesheet"> 
         <!--IMPORTAÇÃO DO ARQUIVO DE CSS-->
-        <link id="css" rel="stylesheet" href="../css/login/lightlogin.css">
+        <link 
+        id="css" 
+        rel="stylesheet" 
+        href="../css/login/lightlogin.css">
         <!--IMPORTAÇÃO DO ARQUIVO DE JAVASCRIPT-->
     </head>
 
@@ -25,8 +54,14 @@
         <div class="container">
             <div class="main-login">
                 <div class="left-login">
-                    <h1 class="mt-4">FAÇA LOGIN OU CRIE A SUA CONTA!</h1>
-                    <img id="planta" src="../img/plantadark.svg" class="left-login-image" alt="planta">
+                    <h1 class="mt-4">
+                        FAÇA LOGIN OU CRIE A SUA CONTA!
+                    </h1>
+                    <img 
+                    id="planta" 
+                    src="../img/plantadark.svg" 
+                    class="left-login-image" 
+                    alt="planta">
                 </div>
                 <div class="right-login">
                     <div class="row full-height justify-content-center">
@@ -34,10 +69,18 @@
                             <div class="section text-center">
                                 <!--Alternadores para poder trocar entre Entrar e Criar-->
                                 <h6 class="pb-3 mt-3">
-                                    <span>Entrar </span>
-                                    <span>Criar</span>
+                                    <span>
+                                        Entrar
+                                    </span>
+                                    <span>
+                                        Criar
+                                    </span>
                                 </h6>
-                                    <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                                    <input 
+                                    class="checkbox" 
+                                    type="checkbox" 
+                                    id="reg-log" 
+                                    name="reg-log"/>
                                     <label for="reg-log"></label>
                                 <div class="card-3d-wrap mx-auto">
                                     <div class="card-3d-wrapper">
@@ -48,18 +91,42 @@
                                                     <!--Logo da Empório Sertanejo com a ancoragem para a index.html-->
                                                     <h4>
                                                         <a href="../../index.html">
-                                                            <img id="logo1" width="60%" src="../img/logoemporiolight.png" alt="">
+                                                            <img 
+                                                            id="logo1" 
+                                                            width="60%" 
+                                                            src="../img/logoemporiolight.png" 
+                                                            alt="logo">
                                                         </a>
                                                     </h4>
                                                     <!--Input de CPF-->
                                                     <div class="form-group">
-                                                        <input onkeypress="CpfMask(this)" type="cpf" autocomplete="off" maxLength="14" name="logcpf" class="form-style" placeholder="CPF:" id="logcpf" autocomplete="off">
+                                                        <input 
+                                                        onkeypress="CpfMask(this)" 
+                                                        type="cpf" 
+                                                        autocomplete="off" 
+                                                        maxLength="14" 
+                                                        name="logcpf"
+                                                        class="form-style" 
+                                                        placeholder="CPF:" 
+                                                        id="logcpf" 
+                                                        autocomplete="off">
                                                     </div>	
                                                     <!--Input de Senha-->
                                                     <div class="form-group mt-2">
-                                                        <input type="password" name="logpass" class="form-style" placeholder="Senha:" id="logpass" autocomplete="off">
+                                                        <input 
+                                                        type="password" 
+                                                        name="logpass" 
+                                                        class="form-style" 
+                                                        placeholder="Senha:" 
+                                                        id="logpass" 
+                                                        autocomplete="off">
                                                     </div>
-                                                    <button class="btn mt-5" type="submit" id="login-btn">enviar</button>
+                                                    <button 
+                                                    class="btn mt-5" 
+                                                    type="submit" 
+                                                    id="login-btn">
+                                                        enviar
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,22 +136,51 @@
                                                 <div class="section text-center">
                                                     <!--Logo da Empório Sertanejo com a ancoragem para a index.html-->
                                                     <a href="../../index.html">
-                                                        <img id="logo2" width="60%" src="../img/logoemporiolight.png" alt="">
+                                                        <img 
+                                                        id="logo2"
+                                                        width="60%" 
+                                                        src="../img/logoemporiolight.png" 
+                                                        alt="logo">
                                                     </a>
                                                     <!--Input de Nome-->
                                                     <div class="form-group">
-                                                        <input type="text" name="logname" class="form-style" placeholder="Seu Nome Completo:" id="registname" autocomplete="off">
+                                                        <input 
+                                                        type="text"
+                                                        name="logname" 
+                                                        class="form-style" 
+                                                        placeholder="Seu Nome Completo:" 
+                                                        id="registname" 
+                                                        autocomplete="off">
                                                     </div>	
                                                     <!--Input de CPF-->
                                                     <div class="form-group mt-2">
-                                                        <input onkeypress="CpfMask(this)" type="cpf" maxLength="14" name="logcpf" class="form-style" placeholder="CPF:" id="registcpf" autocomplete="off">
+                                                        <input 
+                                                        onkeypress="CpfMask(this)" 
+                                                        type="cpf" 
+                                                        maxLength="14"
+                                                        name="logcpf" 
+                                                        class="form-style" 
+                                                        placeholder="CPF:" 
+                                                        id="registcpf" 
+                                                        autocomplete="off">
                                                     </div>	
                                                     <!--Input de Senha-->
                                                     <div class="form-group mt-2">
                                                         <div class="form-group mt-2">
-                                                        <input type="password" name="logpass" class="form-style" placeholder="Senha:" id="registpass" autocomplete="off">
+                                                        <input 
+                                                        type="password" 
+                                                        name="logpass" 
+                                                        class="form-style" 
+                                                        placeholder="Senha:" 
+                                                        id="registpass" 
+                                                        autocomplete="off">
                                                     </div>
-                                                    <button class="btn mt-4" type="submit" id="regist-btn">enviar</button>
+                                                    <button 
+                                                    class="btn mt-4" 
+                                                    type="submit" 
+                                                    id="regist-btn">
+                                                        enviar
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
