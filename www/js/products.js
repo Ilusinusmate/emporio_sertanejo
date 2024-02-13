@@ -8,6 +8,7 @@ if (localStorage.getItem("cssmode") === null) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const cssmode = localStorage.getItem("cssmode");
+    let logo1 = document.getElementById("logo1");
     let css = document.getElementById("css");
     let logo = document.getElementById("logo");
     let img = document.getElementById("sun");
@@ -16,12 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cssmode === "dark") {
         css.setAttribute("href", "../css/index/darkindex.css");
         logo.setAttribute("src", "../img/logoemporio.png");
+        logo1.setAttribute("src", "../img/logoemporio.png");
         img.setAttribute("src", "../img/sun.png");
         nav.classList.remove("navbar-light");
         nav.classList.add("navbar-dark");
     } else if (cssmode === "light") {
         css.setAttribute("href", "../css/index/lightindex.css");
         logo.setAttribute("src", "../img/logoemporiolight.png");
+        logo1.setAttribute("src", "../img/logoemporiolight.png");
         img.setAttribute("src", "../img/moon.png");
         nav.classList.remove("navbar-dark");
         nav.classList.add("navbar-light");
@@ -38,10 +41,12 @@ CssMode.addEventListener("click",  (e) => {
     let logo = document.getElementById("logo");
     let nav = document.getElementById("neubar");
     let img = document.getElementById("sun");
+    let logo1 = document.getElementById("logo1");
 
     if (mode === "light") {
         css.setAttribute("href", "../css/index/darkindex.css");
         logo.setAttribute("src", "../img/logoemporio.png");
+        logo1.setAttribute("src", "../img/logoemporio.png");
         img.setAttribute("src", "../img/sun.png");
         nav.classList.remove("navbar-light");
         nav.classList.add("navbar-dark");
@@ -49,6 +54,7 @@ CssMode.addEventListener("click",  (e) => {
     } else if (mode === "dark") {
         css.setAttribute("href", "../css/index/lightindex.css");
         logo.setAttribute("src", "../img/logoemporiolight.png");
+        logo1.setAttribute("src", "../img/logoemporiolight.png");
         img.setAttribute("src", "../img/moon.png");
         nav.classList.remove("navbar-dark");
         nav.classList.add("navbar-light");
