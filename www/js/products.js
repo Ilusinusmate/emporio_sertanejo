@@ -6,12 +6,8 @@ if (localStorage.getItem("cssmode") === null) {
     localStorage.setItem("cssmode", "light");
 };
 
-//const para acessar o valor de local storage que guarda o tema
-const cssmode = localStorage.getItem("cssmode");
-
-
-//função que carrega o elemento da local storage
-function startCssMode(cssmode) {
+document.addEventListener("DOMContentLoaded", () => {
+    const cssmode = localStorage.getItem("cssmode");
     let css = document.getElementById("css");
     let logo = document.getElementById("logo");
     let img = document.getElementById("sun");
@@ -30,9 +26,7 @@ function startCssMode(cssmode) {
         nav.classList.remove("navbar-dark");
         nav.classList.add("navbar-light");
     }
-}
-
-startCssMode(cssmode);
+})
 
 //const para descobrir qual o tema que a página se encontra (dark mode ou light mode)
 const CssMode = document.getElementById("css-mode");

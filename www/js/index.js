@@ -5,12 +5,45 @@ if (localStorage.getItem("cssmode") === null) {
 
 //const para acessar o botão que troca o tema (dark mode ou light mode)
 const CssMode = document.getElementById("css-mode");
-//const para acessar o valor de local storage que guarda o tema
-const stylemode = localStorage.getItem("cssmode");
 
+document.addEventListener("DOMContentLoaded", () => {
+    const stylemode = localStorage.getItem("cssmode");
 
-//função que carrega o elemento da local storage
-function startStyleMode(stylemode) {
+    cidade = document.getElementById("cidade");
+    cidade.addEventListener("input", handleSelect);
+
+    var eachdivs = document.querySelectorAll('.eachdiv');
+
+    function checkScroll1() {
+        eachdivs.forEach(function(div) {
+            var divPosition = div.getBoundingClientRect().top;
+            var screenHeight = window.innerHeight;    
+
+            if (divPosition < screenHeight) {
+                div.classList.add('triggered');
+            }
+        }) 
+    }
+
+    window.addEventListener('scroll', checkScroll1);
+    checkScroll1();
+
+    var maps = document.querySelectorAll('.maps');
+
+    function checkScroll2() {
+        maps.forEach(function(div) {
+            var divPosition = div.getBoundingClientRect().top;
+            var screenHeight = window.innerHeight;    
+
+            if (divPosition < screenHeight) {
+                div.classList.add('triggered');
+            }
+        }) 
+    }
+
+    window.addEventListener('scroll', checkScroll2);
+    checkScroll2();
+
     let css = document.getElementById("css");
     let logo = document.getElementById("logo");
     let img = document.getElementById("sun");
@@ -32,15 +65,6 @@ function startStyleMode(stylemode) {
         nav.classList.remove("navbar-dark");
         nav.classList.add("navbar-light");
     }
-}
-
-startStyleMode(stylemode);
-
-
-//função para no carregamento da página ele já fazer a seleção correta para o mapa
-document.addEventListener("DOMContentLoaded", () => {
-    cidade = document.getElementById("cidade");
-    cidade.addEventListener("input", handleSelect);
 })
 
 //função que de fato carrega o mapa
@@ -82,3 +106,31 @@ CssMode.addEventListener("click",  (e) => {
         localStorage.setItem("cssmode", "light")
     };
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    var footer = document.querySelector('.footer-dark');
+    var testimonials = document.querySelector('.testimonials');
+  
+    function checkFooterVisibility() {
+        var footerPosition = footer.getBoundingClientRect().top;
+        var screenHeight = window.innerHeight;
+  
+        if (footerPosition < screenHeight) {
+            footer.classList.add('animated');
+        }
+    }
+    window.addEventListener('scroll', checkFooterVisibility);
+    checkFooterVisibility();
+
+    function checkTestimonialsVisibility() {
+        var testimonialsPosition = testimonials.getBoundingClientRect().top;
+        var screenHeight = window.innerHeight;
+  
+        if (testimonialsPosition < screenHeight) {
+            testimonials.classList.add('animated');
+        }
+    }
+    window.addEventListener('scroll', checkTestimonialsVisibility);
+    checkTestimonialsVisibility();
+
+});

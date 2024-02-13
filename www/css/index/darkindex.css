@@ -5,10 +5,50 @@ body {
     overflow-x: hidden;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        top: -80px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%); /* Começa escondido abaixo da tela */
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes cascate {
+    from {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(-20px); /* Move para cima */
+    }
+    to {
+        opacity: 1; /* Torna o elemento visível */
+        transform: translateY(0); /* Volta à posição original */
+    }
+}
+  
+
 /**ESTILIZAÇÃO DA NAVBAR**/
 #neubar {
     background-color: #2a2b38;
     box-shadow: 4px 6px 12px rgba(140, 131, 131, 0.17);
+    animation: slideDown 0.75s ease-in-out forwards;
 }
 
 @media only screen and (max-width: 767px) {
@@ -57,12 +97,19 @@ body {
     }
 }
 
+.item {
+    opacity: 0;
+    animation-delay: 1.5s;
+    animation: fadeIn 3s ease forwards;
+}
+
 .hrcel {
     display: none;
 }
 
 .nav-item {
     font-size: 18px;
+    animation: fadeIn 1.5s ease forwards;
 }
 
 .nav-item .active {
@@ -91,7 +138,7 @@ body {
 }
 
 a.navbar-brand {
-    color: #454545
+    animation: fadeIn 1.5s ease forwards;
 }
 
 #products {
@@ -217,8 +264,45 @@ a.navbar-brand {
     font-family: 'Bebas Neue', cursive;
 }
 
+.box {
+    opacity: 0;
+    animation: cascate 0.5s ease forwards;
+}
+
+.box:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.box:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.box:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.box:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.box:nth-child(5) {
+    animation-delay: 1s;
+}
+
 hr {
     border-top: 0.5px solid rgba(15, 15, 15, 0.425);
+}
+
+.maps {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.maps:nth-child(1) {
+    animation-delay: 0.4s;
+}
+.maps:nth-child(2) {
+    animation-delay: 0.8s;
 }
 
 .footer-dark {
@@ -226,12 +310,18 @@ hr {
     color: #f0f9ff;
     background-color: #2a2b38;
 }
+
+.animated {
+    animation: slideUp 1.5s ease forwards;
+    transition: 1.5s;
+}
   
 .footer-dark h3 {
     margin-top: 0;
     margin-bottom: 12px;
     font-weight: bold;
     font-size: 16px;
+    flex-wrap: wrap;
 }
   
 .footer-dark ul {
@@ -361,6 +451,7 @@ a:link,a:active,a:visited,a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .innerdiv {
@@ -375,13 +466,42 @@ a:link,a:active,a:visited,a:hover{
 	padding: 1rem 2rem;
     border-radius: 0.8rem;
     box-shadow: 5px 5px 20px #0000006b;
-    transition: 0.5s;
+    transition: opacity 1.5s ease;
+    opacity: 0;
     color: white;
+}
+
+.eachdiv:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.eachdiv:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.eachdiv:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.eachdiv:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.eachdiv:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.eachdiv:nth-child(6) {
+    animation-delay: 1s;
 }
 
 .eachdiv:hover {
     transition: 0.5s;
     transform: scale(1.15);
+}
+
+.triggered {
+    animation: cascate 0.5s ease forwards
 }
 
 .div1 {
