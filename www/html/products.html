@@ -13,7 +13,7 @@
         <!--DEFINIÇÃO DO FAVICON-->
         <link 
         rel="shortcut icon" 
-        href="www/img/favicon.ico" />
+        href="../img/favicon.ico" />
         <!--DEFINIÇÃO DE FONTES-->
         <link 
         rel="preconnect" 
@@ -48,91 +48,94 @@
     </head>
     
     <body>
-        <div id="root">
-            <!--NAVBAR DO SITE-->
-            <nav 
-            class="navbar navbar-expand-sm navbar-light d-flex" 
-            id="neubar">
-                <div class="container">
-                    <!--Logo da Navbar-->
-                    <a 
-                    class="navbar-brand" 
-                    href="../../index.html">
-                        <img 
-                        id="logo" 
-                        src="../img/logoemporiolight.png" 
-                        height="100" />
-                    </a>
+        <!--NAVBAR DO SITE-->
+        <nav 
+        class="navbar navbar-expand-sm navbar-light d-flex" 
+        id="neubar">
+            <div class="container">
+                <!--Logo da Navbar-->
+                <a 
+                class="navbar-brand" 
+                href="../../index.html">
+                    <img 
+                    id="logo" 
+                    src="../img/logoemporiolight.png" 
+                    height="100" />
+                </a>
 
-                    <button 
-                    class="navbar-toggler" 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarNavDropdown" 
-                    aria-controls="navbarNavDropdown" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon">
-                        </span>
-                    </button>
-            
-                    <!--Inicio das Tags de Ancoragem da Navbar-->
-                    <div 
-                    align="center" 
-                    class="justify-content-end collapse navbar-collapse"
-                    align="center" 
-                    id="navbarNavDropdown">
-                        <ul class="navbar-nav ms-auto ">
-                            <!--Ancoragem Para a Página de Produtos-->
-                            <li class="nav-item">
-                                <a 
-                                id="products" 
-                                class="nav-link mx-2" 
-                                href="../html/products.html">
-                                    Produtos
-                                </a>
-                            </li>
-                            <!--Seletor de Cidade-->
-                            <li class="nav-item">
-                                <a id="teste">
-                                    <select 
-                                    id="cidade" 
-                                    class="selectpicker">
-                                        <option value="cabedelo">
-                                            Cabedelo
-                                        </option>
-                                        <option value="joaopessoa">
-                                            João Pessoa
-                                        </option>
-                                    </select>   
-                                </a>
-                            </li>
-                            <!--Ancoragem Para a Página de Login-->
-                            <li class="nav-item">
-                                <a 
-                                class="nav-link mx-2 active" 
-                                aria-current="page"
-                                href="./login.html">
-                                    Login
-                                </a>
-                            </li>
-                            <!--Troca de Tema da Página-->
-                            <li class="nav-item">
-                                <a 
-                                id="css-mode" 
-                                class="nav-link mx-2">
-                                    <img 
-                                    id="sun" 
-                                    src="../img/moon.png" 
-                                    width="35px" 
-                                    height="35px" 
-                                    alt="lua">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNavDropdown" 
+                aria-controls="navbarNavDropdown" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+        
+                <!--Inicio das Tags de Ancoragem da Navbar-->
+                <div 
+                align="center" 
+                class="justify-content-end collapse navbar-collapse"
+                align="center" 
+                id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto ">
+                        <!--Ancoragem Para a Página de Produtos-->
+                        <li class="nav-item">
+                            <a 
+                            id="products" 
+                            class="nav-link mx-2" 
+                            href="../html/products.html">
+                                Produtos
+                            </a>
+                        </li>
+                        <!--Seletor de Cidade-->
+                        <li class="nav-item">
+                            <a id="teste">
+                                <select 
+                                id="cidade" 
+                                class="selectpicker">
+                                    <option value="cabedelo">
+                                        Cabedelo
+                                    </option>
+                                    <option value="joaopessoa">
+                                        João Pessoa
+                                    </option>
+                                </select>   
+                            </a>
+                        </li>
+                        <!--Ancoragem Para a Página de Login-->
+                        <li class="nav-item">
+                            <a 
+                            class="nav-link mx-2 active" 
+                            aria-current="page"
+                            href="./login.html">
+                                Login
+                            </a>
+                        </li>
+                        <!--Troca de Tema da Página-->
+                        <li class="nav-item">
+                            <a 
+                            id="css-mode" 
+                            class="nav-link mx-2">
+                                <img 
+                                id="sun" 
+                                src="../img/moon.png" 
+                                width="35px" 
+                                height="35px" 
+                                alt="lua">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
+
+        <!--PRODUCT SLIDER-->
+        <div id="root">
+            <!--REACT SLIDER-->
         </div>
 
         <div class="footer-dark">
@@ -212,15 +215,6 @@
         </script>
         <!--IMPORTAÇÃO DO ARQUIVO DE CSS-->
         <link id="css" rel="stylesheet" href="../css/index/lightindex.css">
-        <!--INTEGRAÇÃO DO REACT E REACT DOM-->
-        <script 
-        crossorigin 
-        src="https://unpkg.com/react@17/umd/react.development.js">
-        </script>
-        <script 
-        crossorigin 
-        src="https://unpkg.com/react-dom@17/umd/react-dom.development.js">
-        </script> 
         <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 

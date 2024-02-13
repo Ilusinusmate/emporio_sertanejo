@@ -1,5 +1,4 @@
-API_URL = "https://emporio-sertanejo-api.onrender.com"
-
+API_URL = "https://emporio-sertanejo-api.onrenderize.com"
 
 // primeira vez que a pessoa acessa a página
 if (localStorage.getItem("cssmode") === null) {
@@ -69,11 +68,11 @@ var products = undefined;
 
 cidade.addEventListener("change", (e) => {
     e.preventDefault()
-    render()
+    renderize()
 })
 
 
-function render(){
+function renderize() {
     switch (cidade.value){
 
         case "joaopessoa":
@@ -103,4 +102,4 @@ function render(){
     .catch(erro => console.error("Error:", erro))
 }
 
-render()
+renderize()
