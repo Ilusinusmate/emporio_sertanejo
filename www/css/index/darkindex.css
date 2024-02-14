@@ -491,7 +491,7 @@ a:link,a:active,a:visited,a:hover{
 }
 
 .eachdiv:nth-child(6) {
-    animation-delay: 1s;
+    animation-delay: 1.2s;
 }
 
 .eachdiv:hover {
