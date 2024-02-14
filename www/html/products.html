@@ -2,21 +2,147 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <!--page-icon------------>
+        <link 
+        rel="preconnect" 
+        href="https://fonts.gstatic.com" 
+        crossorigin>
+
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" 
+        rel="stylesheet">
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" 
+        rel="stylesheet"> 
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,800&display=swap" 
+        rel="stylesheet"> 
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Abel&display=swap" 
+        rel="stylesheet">
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" 
+        rel="stylesheet"> 
+
+        <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
+        <link 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+        rel="stylesheet">
         <!--stylesheet------------->
-        <link rel="stylesheet" type="text/css" href="../css/products/lightproducts.css">
-        <!--light-slider.css------------->
-        <link rel="stylesheet" type="text/css" href="../css/slider/lightslider.css">
+        <link 
+        rel="stylesheet" 
+        type="text/css" 
+        href="../css/products/lightproducts.css">
         <!--Jquery-------------------->
-        <script type="text/javascript" src="../js/Jquery.js"></script>
+        <script 
+        type="text/javascript" 
+        src="../js/Jquery.js"></script>
         <!--lightslider.js--------------->
-        <script type="text/javascript" src="../js/lightslider.js"></script>
+        <script 
+        type="text/javascript" 
+        src="../js/lightslider.js"></script>
         <script src="../js/products.js"></script>
         <script src="../js/products2.js"></script>
     </head>
     <body>
+        <!--NAVBAR DO SITE-->
+        <nav 
+        class="navbar navbar-expand-sm navbar-light d-flex" 
+        id="neubar">
+            <div 
+            class="container">
+                <!--Logo da Navbar-->
+                <a 
+                class="navbar-brand" 
+                href="../../index.html">
+                    <img 
+                    id="logo" 
+                    src="../img/logoemporiolight.png" 
+                    height="100" />
+                </a>
+
+                <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNavDropdown" 
+                aria-controls="navbarNavDropdown" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                    <span 
+                    class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!--Inicio das Tags de Ancoragem da Navbar-->
+                <div 
+                align="center" 
+                class="justify-content-end collapse navbar-collapse" 
+                align="center" 
+                id="navbarNavDropdown">
+                    <ul 
+                    class="navbar-nav ms-auto ">
+                        <!--Ancoragem Para a Página de Produtos-->
+                        <li 
+                        class="nav-item">
+                            <a 
+                            id="products" 
+                            class="nav-link mx-2" 
+                            href="products.html">
+                                Produtos
+                            </a>
+                        </li>
+                        <!--Seletor de Cidade-->
+                        <li class="nav-item">
+                            <a id="teste">
+                                <select 
+                                id="cidade" 
+                                class="selectpicker">
+                                    <option value="cabedelo">
+                                        Cabedelo
+                                    </option>
+                                    <option value="joaopessoa">
+                                        João Pessoa
+                                    </option>
+                                </select>   
+                            </a>
+                        </li>
+                        <!--Ancoragem Para a Página de Login-->
+                        <li class="nav-item">
+                            <a 
+                            class="nav-link mx-2 active" 
+                            aria-current="page" 
+                            href="login.html">
+                                Login
+                            </a>
+                        </li>
+                        <!--Troca de Tema da Página-->
+                        <li class="nav-item">
+                            <a 
+                            id="css-mode" 
+                            class="nav-link mx-2">
+                                <img 
+                                id="sun" 
+                                src="../img/moon.png" 
+                                width="35px" 
+                                height="35px" 
+                                alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <hr>
+        <h3 class='main-title'>PRODUTOS DA SEMANA</h3>
+        <hr>
+
         <section class="slider">
             <ul id="autoWidth" class="cs-hidden">
                 <li class="item-a">
@@ -157,6 +283,70 @@
                     </div>		
                 </li>
             </ul>
-        </section>   
+        </section>
+        
+        <br><br><br>
+
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 item">
+                            <h3>
+                                Entre em Contato
+                            </h3>
+                            <div class="item social mt-4">
+                                <a href="#">
+                                    <i class="fa fa-google"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-whatsapp"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <h3>Serviços</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Lorem Ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Lorem Ipsum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Lorem Ipsum
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4 item text">
+                            <a href="index.html">
+                                <img 
+                                id="logo1" 
+                                src="../img/logoemporiolight.png" 
+                                height="100" 
+                                alt="logo">
+                            </a>
+                            <p id="texto-logo">
+                                Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">
+                    Empório Sertanejo &copy; 2024
+                </p>
+            </footer>
+        </div>
     </body>
 </html>
