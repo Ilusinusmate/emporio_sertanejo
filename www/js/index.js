@@ -80,7 +80,7 @@ async function handleSelect(ev) {
 
 
 //função que troca o tema da página
-CssMode.addEventListener("click",  (e) => {
+CssMode.addEventListener("click", () => {
     const mode = localStorage.getItem("cssmode");
     let css = document.getElementById("css");
     let logo = document.getElementById("logo");
