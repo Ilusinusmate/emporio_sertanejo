@@ -346,10 +346,10 @@ h6 span{
 
     .card-front {
         width: 85%;
-        left: 30px;
+        left: 40px;
     }
     .card-back {
-        left: 30px;
+        left: 40px;
         width: 85%;
     }
 }
