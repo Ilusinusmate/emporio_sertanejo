@@ -74,7 +74,7 @@ body {
         height: 3px;
         background-color: #a7ffbda3 !important;
         position: absolute;
-        left: 115 !important;
+        left: 115px !important;
         bottom: 0 !important;
         transition: 0.5s ease-in-out;
     }
@@ -159,7 +159,7 @@ a.navbar-brand {
     height: 3px;
     background-color: #a7ffbda3;
     position: absolute;
-    left: 10;
+    left: 10px;
     bottom: 0;
     transition: 0.5s ease-in-out;
 }
@@ -174,7 +174,7 @@ a.navbar-brand {
     }
     
     #teste::after {
-        top: 52 !important;
+        top: 52px !important;
     }
     
     #teste:hover::after {
@@ -182,7 +182,7 @@ a.navbar-brand {
     }
 
     #products::after {
-        left: 10 !important;
+        left: 10px !important;
     }
     
     #products:hover::after {
@@ -197,7 +197,7 @@ a.navbar-brand {
 
     #teste::after {
         left: 10% !important;
-        top: 32 !important;
+        top: 32px !important;
     }
     
     #teste:hover::after {
@@ -243,8 +243,8 @@ a.navbar-brand {
     height: 3px;
     background-color: #a7ffbda3;
     position: absolute;
-    left: 14;
-    top: 32.5;
+    left: 14px;
+    top: 32.5px;
     transition: 0.5s ease-in-out;
 }
 
