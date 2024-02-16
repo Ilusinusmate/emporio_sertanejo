@@ -1,4 +1,4 @@
-API_URL = "http://ec2-54-87-63-198.compute-1.amazonaws.com/";
+API_URL = "https://emporio-sertanejo-api.onrender.com";
 
 // primeira vez que a pessoa acessa a página
 if (localStorage.getItem("cssmode") === null) {
