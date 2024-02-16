@@ -5,10 +5,8 @@ if (localStorage.getItem("cssmode") === null) {
     localStorage.setItem("cssmode", "light");
 };
 
-
 //const para acessar o valor de local storage que guarda o tema
 const cssmode = localStorage.getItem("cssmode");
-
 
 function startStyleMode(startstyle) {
     let css = document.getElementById("css");
@@ -38,7 +36,6 @@ const RegistBtn = document.getElementById("regist-btn");
 const LoginBtn = document.getElementById("login-btn");
 //const para descobrir qual o tema que a página se encontra (dark mode ou light mode)
 const CssMode = document.getElementById("css-mode");
-
 
 LoginBtn.addEventListener("click", (e) =>{
     e.preventDefault();

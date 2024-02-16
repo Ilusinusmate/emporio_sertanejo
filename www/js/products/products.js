@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
+    
     cidade = document.getElementById("cidade");
     var products = undefined;
     
@@ -68,19 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
         
     function renderize() {
         switch (cidade.value){
-
             case "joaopessoa":
                 var unit = 1;
                 break;
-
             case "cabedelo":
                 var unit = 2;
                 break;
-
             default:
                 var unit = 1;
         }
-
 
         fetch(API_URL+"/products/all?unit="+unit,  {
             method: "GET",
@@ -99,4 +96,3 @@ document.addEventListener("DOMContentLoaded", () => {
     renderize()
 
 })
-
