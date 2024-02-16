@@ -5,6 +5,10 @@ if (localStorage.getItem("cssmode") === null) {
     localStorage.setItem("cssmode", "light");
 };
 
+if (localStorage.getItem("cidade") === null) {
+    localStorage.setItem("cidade", "cabedelo");
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     const cssmode = localStorage.getItem("cssmode");
     let logo1 = document.getElementById("logo1");
@@ -57,8 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     })
 
-
-    
     cidade = document.getElementById("cidade");
     var products = undefined;
     
@@ -96,3 +98,14 @@ document.addEventListener("DOMContentLoaded", () => {
     renderize()
 
 })
+
+// JavaScript Document
+$(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+});
