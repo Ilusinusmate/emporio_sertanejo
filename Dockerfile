@@ -7,6 +7,8 @@ EXPOSE 8000
 
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt --no-cache-dir
+RUN mkdir /etc/secrets
+COPY ./.env /etc/secrets
 
 COPY ./server .
 #CMD ["run.handler"]
