@@ -44,58 +44,37 @@ async function renderize() {
     })
     .catch(erro => console.error("Error:", erro))
 
-    const sliderContainer = document.querySelector(".slider #autoWidth")
+    const myList = document.getElementById('autoWidth');
 
-    products.forEach(element => {
-        console.log("aaaa", element)
+    var cont = 0;
 
-        if (element.image_link == null){
-            element.image_link = "";
-        };
-
-        let li = document.createElement("li")
-        let div = document.createElement("div")
-        let div2 = document.createElement("div")
-        let img = document.createElement("img")
-        let div3 = document.createElement("div")
-        let a = document.createElement("a")
-        let div4 = document.createElement("div")
-        let div5 = document.createElement("div")
-        let a2 = document.createElement("a")
-        let span = document.createElement("span")
-        let a3 = document.createElement("a")
-
-        div.setAttribute("class", "box")
-        div2.setAttribute("class", "slide-img")
-        img.setAttribute("alt", "1")
-        img.setAttribute("src", element.image_link)
-        div3.setAttribute("class", "overlay")
-        a.setAttribute("href", "#")
-        a.setAttribute("class", "buy-btn")
-        div4.setAttribute("class", "detail-box")
-        div5.setAttribute("class", "type")
-        a2.setAttribute("href", "#")
-        a2.textContent = element.name
-        span.textContent = element.description
-        a3.textContent = `$${element.price}`
-
-        div3.appendChild(a)
-        div2.appendChild(img)
-        div2.appendChild(div3)
-        div.appendChild(div2)
-
-        div5.appendChild(a2)
-        div5.appendChild(span)
-        div4.appendChild(div5)
-        div4.appendChild(a3)
-        div.appendChild(div4)
-
-        li.appendChild(div)
+    for (const li of myList.getElementsByTagName('li')) {
+        const img = li.querySelector('img');
+    
+        const buyBtn = li.querySelector('.buy-btn');
+        const price = li.querySelector('.price');
+        const otherA = li.querySelector('#slide-title');
+    
+        const span = li.querySelector('span');
+    
+        if (products[cont].image_link === undefined || products[cont].image_link === null) {
+            var image = "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+        } else {
+            var image = products[cont].image_link
+        }
 
 
-
-        sliderContainer.appendChild(li)
-    });
+        img.src = image;
+        buyBtn.textContent = 'Buy Now';
+        price.textContent = `R$${products[cont].price}`;
+        span.textContent = products[cont].description;
+        otherA.textContent = products[cont].name;
+        if (cont == 0) {
+            cont = 1
+        } else if (cont == 1) {
+            cont = 0
+        }
+    }
 }
 
 
