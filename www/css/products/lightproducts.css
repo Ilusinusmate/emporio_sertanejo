@@ -318,7 +318,7 @@ a{
     transform: translate(-50%,-50%);
     width:100%;
     height: 100%;
-    background-color: #e44e13fa;
+    background-color: #e44e138d;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -517,6 +517,7 @@ i {
     -webkit-transform: translate(0px, 0px);
     -ms-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
+    transition: all 1s;
     -webkit-transition: all 1s;
     -webkit-transition-property: -webkit-transform,height;
     -moz-transition-property: -moz-transform,height;
@@ -604,6 +605,7 @@ i {
     -ms-transform: translate3d(0px, 0px, 0px);
     -webkit-transform: translate3d(0px, 0px, 0px);
     -o-transform: translate3d(0px, 0px, 0px);
+    transition-property: -webkit-transform;
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     -webkit-touch-callout: none;
