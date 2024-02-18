@@ -9,6 +9,7 @@ cidade = document.getElementById("cidade");
 cidade.addEventListener("change", (e) => {
     e.preventDefault()
     renderize()
+    window.location.reload();
 })
 
 async function renderize() {
