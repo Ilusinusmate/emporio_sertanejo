@@ -450,9 +450,14 @@ a{
 }
 
 @media (max-width:991px) {
+    .footer-dark {
+        text-align: center;
+    }
+
     .footer-dark .item.social {
       text-align: center;
       margin-top: 20px;
+      margin-bottom: 20px;
     }
 }
 

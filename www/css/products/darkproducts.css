@@ -447,8 +447,12 @@ a{
 }
 
 @media (max-width:991px) {
+    .footer-dark {
+        text-align: center;
+    }
     .footer-dark .item.social {
       text-align: center;
+      margin-bottom: 20px;
       margin-top: 20px;
     }
 }
