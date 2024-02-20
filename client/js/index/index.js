@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cidade = document.getElementById("cidade");
     cidade.addEventListener("input", handleSelect);
 
+    // função que verifica se o elemento já foi alcançado pelo scroll
     function checkScroll(elements) {
         window.addEventListener('scroll', function () {
             elements.forEach(function (element) {
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // função que verifica se o elemento já foi alcançado pelo scroll
     function checkVisibility(element) {
         window.addEventListener('scroll', function () {
             var elementPosition = element.getBoundingClientRect().top;
@@ -29,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // geração das variáveis que serão verificadas pelas funções acima
     var eachdivs = document.querySelectorAll('.eachdiv');
     checkScroll(eachdivs);
     

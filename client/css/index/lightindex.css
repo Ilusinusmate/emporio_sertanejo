@@ -5,6 +5,7 @@ body {
     background-color: #dbdbdb;
 }
 
+/*ANIMAÇÕES*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -43,14 +44,7 @@ body {
     }
 }
 
-/**ESTILIZAÇÃO DA NAVBAR**/
-#neubar {
-    background: #f0f0f0;
-    box-shadow: 4px 6px 12px rgba(0,0,0,0.4);
-    animation: slideDown 0.75s ease-in-out forwards;
-    opacity: 0.9;
-}
-
+/*MEDIA QUERIES*/
 @media only screen and (max-width: 767px) {
     #neubar .nav-item {
       margin-bottom: 15px !important; 
@@ -89,6 +83,143 @@ body {
         text-align: center;
         padding-bottom: 20px;
     }
+}
+
+@media only screen and (max-width: 767px) {
+    #cidade {
+        transform: translateY(20.5px);
+    }
+    
+    #teste::after {
+        border-radius: 10%;
+        content: " ";
+        width: 0%;
+        height: 3px;
+        background-color: #e44e13fa;
+        position: absolute;
+        left: 14px;
+        top: 52px !important;
+        transition: 0.5s ease-in-out;
+    }
+    
+    #teste:hover::after {
+        width: 87% !important;
+    }
+
+    #products::after {
+        border-radius: 10%;
+        content: " ";
+        width: 0%;
+        height: 3px;
+        background-color: #e44e13fa;
+        position: absolute;
+        left: 10px !important;
+        bottom: 0;
+        transition: 0.5s ease-in-out;
+    }
+    
+    #products:hover::after {
+        width: 80% !important;
+    }    
+}
+
+@media only screen and (max-width: 575px) {
+    #cidade {
+        transform: translateY(0);
+    }
+
+    #teste::after {
+        left: 10% !important;
+        top: 32px !important;
+    }
+    
+    #teste:hover::after {
+        width: 78% !important;
+    }
+
+    #products::after {
+        left: 41% !important;
+    }
+    
+    #products:hover::after {
+        width: 18% !important;
+    }    
+}
+
+@media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align: center;
+      margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .outerdiv {
+        height: 65vw;
+    }
+    .innerdiv {
+		transform: scale(0.8) translateY(-30px);
+	}
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .outerdiv {
+        height: 65vw;
+    }
+    .innerdiv {
+		transform: scale(0.7) translateY(-30px);
+	}
+}
+
+@media only screen and (max-width: 800px) {
+    .outerdiv {
+        height: 60vw;
+    }
+
+	.innerdiv {
+		transform: scale(0.6) translateY(-30px);
+	}
+}
+
+@media only screen and (max-width: 650px) {
+    .outerdiv {
+        height: 60vw;
+    }
+
+	.innerdiv {
+		transform: scale(0.5) translateY(-30px);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.div1 {
+		background-position-x: 10rem;
+	}
+
+    .outerdiv {
+        height: auto;
+    }
+
+	.innerdiv {
+		display: flex; 
+		flex-direction: column;
+		transform: scale(1);
+		margin: 2rem;
+		margin-bottom: 5rem;
+	}
+
+	.attribution {
+		position: relative;
+	}
+}
+
+/**ESTILIZAÇÃO DA NAVBAR**/
+#neubar {
+    background: #f0f0f0;
+    box-shadow: 4px 6px 12px rgba(0,0,0,0.4);
+    animation: slideDown 0.75s ease-in-out forwards;
+    opacity: 0.9;
 }
 
 .hrcel {
@@ -207,67 +338,6 @@ a.navbar-brand {
     position: relative;
 }
 
-@media only screen and (max-width: 767px) {
-    #cidade {
-        transform: translateY(20.5px);
-    }
-    
-    #teste::after {
-        border-radius: 10%;
-        content: " ";
-        width: 0%;
-        height: 3px;
-        background-color: #e44e13fa;
-        position: absolute;
-        left: 14px;
-        top: 52px !important;
-        transition: 0.5s ease-in-out;
-    }
-    
-    #teste:hover::after {
-        width: 87% !important;
-    }
-
-    #products::after {
-        border-radius: 10%;
-        content: " ";
-        width: 0%;
-        height: 3px;
-        background-color: #e44e13fa;
-        position: absolute;
-        left: 10px !important;
-        bottom: 0;
-        transition: 0.5s ease-in-out;
-    }
-    
-    #products:hover::after {
-        width: 80% !important;
-    }    
-}
-
-@media only screen and (max-width: 575px) {
-    #cidade {
-        transform: translateY(0);
-    }
-
-    #teste::after {
-        left: 10% !important;
-        top: 32px !important;
-    }
-    
-    #teste:hover::after {
-        width: 78% !important;
-    }
-
-    #products::after {
-        left: 41% !important;
-    }
-    
-    #products:hover::after {
-        width: 18% !important;
-    }    
-}
-
 #teste::after {
     border-radius: 10%;
     content: " ";
@@ -288,6 +358,7 @@ a.navbar-brand {
     cursor: pointer;
 }
 
+/*SESSÃO SOBRE*/
 .main-title {
     font-size: 45px;
     text-align: center;
@@ -300,6 +371,7 @@ a.navbar-brand {
     animation: fadeIn 3s ease forwards;
 }
 
+/*ESTILIZAÇÃO DO MAPA*/
 .maps {
     opacity: 0;
     transition: opacity 1.5s ease;
@@ -317,6 +389,7 @@ a.navbar-brand {
     transition: 1.5s;
 }
 
+/*ESTILIZAÇÃO DO FOOTER*/
 .footer-dark {
     padding: 50px 0;
     color: black;
@@ -394,12 +467,6 @@ a.navbar-brand {
     margin-bottom: 0;
 }
 
-@media (max-width:991px) {
-    .footer-dark .item.social {
-      text-align: center;
-      margin-top: 20px;
-    }
-}
 
 i {
     margin-top: 8px;
@@ -454,6 +521,7 @@ a:link,a:active,a:visited,a:hover{
 	color:#3f51b5;
 }
 
+/*ESTILIZAÇÃO DOS DEPOIMENTOS*/
 .outerdiv {
 	width: 100%;
     display: flex;
@@ -621,65 +689,4 @@ a:link,a:active,a:visited,a:hover{
 
 .attribution a {
 	text-decoration: none;
-}
-
-@media only screen and (max-width: 1100px) {
-    .outerdiv {
-        height: 65vw;
-    }
-    .innerdiv {
-		transform: scale(0.8) translateY(-30px);
-	}
-}
-
-
-@media only screen and (max-width: 1000px) {
-    .outerdiv {
-        height: 65vw;
-    }
-    .innerdiv {
-		transform: scale(0.7) translateY(-30px);
-	}
-}
-
-@media only screen and (max-width: 800px) {
-    .outerdiv {
-        height: 60vw;
-    }
-
-	.innerdiv {
-		transform: scale(0.6) translateY(-30px);
-	}
-}
-
-@media only screen and (max-width: 650px) {
-    .outerdiv {
-        height: 60vw;
-    }
-
-	.innerdiv {
-		transform: scale(0.5) translateY(-30px);
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	.div1 {
-		background-position-x: 10rem;
-	}
-
-    .outerdiv {
-        height: auto;
-    }
-
-	.innerdiv {
-		display: flex; 
-		flex-direction: column;
-		transform: scale(1);
-		margin: 2rem;
-		margin-bottom: 5rem;
-	}
-
-	.attribution {
-		position: relative;
-	}
 }

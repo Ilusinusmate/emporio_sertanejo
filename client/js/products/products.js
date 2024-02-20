@@ -44,6 +44,7 @@ async function renderize() {
 
     var cont = 0;
 
+    // Laço que cria os slides com seus respectivos dados gerados pelo fetch de data acima
     for (const li of myList.getElementsByTagName('li')) {
         const img = li.querySelector('img');
     

@@ -5,6 +5,7 @@ body {
     overflow-x: hidden;
 }
 
+/*ANIMAÇÕES*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -42,15 +43,8 @@ body {
         transform: translateY(0); /* Volta à posição original */
     }
 }
-  
 
-/**ESTILIZAÇÃO DA NAVBAR**/
-#neubar {
-    background-color: #2a2b38;
-    box-shadow: 4px 6px 12px rgba(140, 131, 131, 0.17);
-    animation: slideDown 0.75s ease-in-out forwards;
-}
-
+/*MEDIA QUERIES*/
 @media only screen and (max-width: 767px) {
     #neubar .nav-item {
       margin-bottom: 15px !important; 
@@ -95,6 +89,127 @@ body {
     .hrcel {
         display: flex !important;
     }
+}
+
+@media only screen and (max-width: 767px) {
+    #cidade {
+        transform: translateY(20.5px);
+    }
+    
+    #teste::after {
+        top: 52px !important;
+    }
+    
+    #teste:hover::after {
+        width: 87% !important;
+    }
+
+    #products::after {
+        left: 10px !important;
+    }
+    
+    #products:hover::after {
+        width: 80% !important;
+    }    
+}
+
+@media only screen and (max-width: 575px) {
+    #cidade {
+        transform: translateY(0);
+    }
+
+    #teste::after {
+        left: 10% !important;
+        top: 32px !important;
+    }
+    
+    #teste:hover::after {
+        width: 78% !important;
+    }
+
+    #products::after {
+        left: 41% !important;
+    }
+    
+    #products:hover::after {
+        width: 18% !important;
+    }    
+}
+
+@media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align: center;
+      margin-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .outerdiv {
+        height: 65vw;
+    }
+    .innerdiv {
+		transform: scale(0.8) translateY(-30px);
+	}
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .outerdiv {
+        height: 65vw;
+    }
+    .innerdiv {
+		transform: scale(0.7) translateY(-30px);
+	}
+}
+
+@media only screen and (max-width: 800px) {
+    .outerdiv {
+        height: 60vw;
+    }
+
+	.innerdiv {
+		transform: scale(0.6) translateY(-30px);
+	}
+}
+
+@media only screen and (max-width: 650px) {
+    .outerdiv {
+        height: 60vw;
+    }
+
+	.innerdiv {
+		transform: scale(0.5) translateY(-30px);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.div1 {
+		background-position-x: 10rem;
+	}
+
+    .outerdiv {
+        height: auto;
+    }
+
+	.innerdiv {
+		display: flex; 
+		flex-direction: column;
+		transform: scale(1);
+		margin: 2rem;
+		margin-bottom: 5rem;
+	}
+
+	.attribution {
+		position: relative;
+	}
+}
+
+/**ESTILIZAÇÃO DA NAVBAR**/
+#neubar {
+    background-color: #2a2b38;
+    box-shadow: 4px 6px 12px rgba(140, 131, 131, 0.17);
+    animation: slideDown 0.75s ease-in-out forwards;
 }
 
 .item {
@@ -168,51 +283,6 @@ a.navbar-brand {
     width: 80%;
 }
 
-@media only screen and (max-width: 767px) {
-    #cidade {
-        transform: translateY(20.5px);
-    }
-    
-    #teste::after {
-        top: 52px !important;
-    }
-    
-    #teste:hover::after {
-        width: 87% !important;
-    }
-
-    #products::after {
-        left: 10px !important;
-    }
-    
-    #products:hover::after {
-        width: 80% !important;
-    }    
-}
-
-@media only screen and (max-width: 575px) {
-    #cidade {
-        transform: translateY(0);
-    }
-
-    #teste::after {
-        left: 10% !important;
-        top: 32px !important;
-    }
-    
-    #teste:hover::after {
-        width: 78% !important;
-    }
-
-    #products::after {
-        left: 41% !important;
-    }
-    
-    #products:hover::after {
-        width: 18% !important;
-    }    
-}
-
 /**SELETOR DE CIDADES**/
 #cidade {
     background: none;
@@ -257,6 +327,7 @@ a.navbar-brand {
     cursor: pointer;
 }
 
+/*SESSÃO DE SOBRE O SITE*/
 .main-title {
     color: white;
     font-size: 45px;
@@ -293,6 +364,7 @@ hr {
     border-top: 0.5px solid rgba(15, 15, 15, 0.425);
 }
 
+/*ESTILIZAÇÃO DO MAPA*/
 .maps {
     opacity: 0;
     transition: opacity 1.5s ease;
@@ -305,6 +377,7 @@ hr {
     animation-delay: 0.8s;
 }
 
+/*ESTILIZAÇÃO DO FOOTER*/
 .footer-dark {
     padding: 50px 0;
     color: #f0f9ff;
@@ -348,7 +421,6 @@ hr {
     margin-bottom: 36px;
 }
 
-
 .footer-dark .item.text p {
     opacity: 0.6;
     margin-bottom: 0;
@@ -385,13 +457,6 @@ hr {
     opacity: 0.5;
     font-size: 13px;
     margin-bottom: 0;
-}
-
-@media (max-width:991px) {
-    .footer-dark .item.social {
-      text-align: center;
-      margin-top: 20px;
-    }
 }
 
 i {
@@ -446,6 +511,7 @@ a:link,a:active,a:visited,a:hover{
 	color:#3f51b5;
 }
 
+/*SEÇÃO DE DEPOIMENTOS*/
 .outerdiv {
 	width: 100%;
     display: flex;
@@ -618,65 +684,4 @@ a:link,a:active,a:visited,a:hover{
 
 .attribution a {
 	text-decoration: none;
-}
-
-@media only screen and (max-width: 1100px) {
-    .outerdiv {
-        height: 65vw;
-    }
-    .innerdiv {
-		transform: scale(0.8) translateY(-30px);
-	}
-}
-
-
-@media only screen and (max-width: 1000px) {
-    .outerdiv {
-        height: 65vw;
-    }
-    .innerdiv {
-		transform: scale(0.7) translateY(-30px);
-	}
-}
-
-@media only screen and (max-width: 800px) {
-    .outerdiv {
-        height: 60vw;
-    }
-
-	.innerdiv {
-		transform: scale(0.6) translateY(-30px);
-	}
-}
-
-@media only screen and (max-width: 650px) {
-    .outerdiv {
-        height: 60vw;
-    }
-
-	.innerdiv {
-		transform: scale(0.5) translateY(-30px);
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	.div1 {
-		background-position-x: 10rem;
-	}
-
-    .outerdiv {
-        height: auto;
-    }
-
-	.innerdiv {
-		display: flex; 
-		flex-direction: column;
-		transform: scale(1);
-		margin: 2rem;
-		margin-bottom: 5rem;
-	}
-
-	.attribution {
-		position: relative;
-	}
 }
