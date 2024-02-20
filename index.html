@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--STANDARDS MODE-->
 <html lang="pt-br">
   <head>
     <!--DEFINIÇÃO DE CHARSET E ESCALA-->
@@ -19,18 +20,23 @@
     rel="preconnect" 
     href="https://fonts.gstatic.com" 
     crossorigin>
+    <!--BEBAS NEUE-->
     <link 
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" 
     rel="stylesheet">
+    <!--TITILLUIM WEB-->
     <link 
     href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" 
-    rel="stylesheet"> 
+    rel="stylesheet">
+    <!--NUNITO SANS--> 
     <link 
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,800&display=swap" 
-    rel="stylesheet"> 
+    rel="stylesheet">
+    <!--ABEL--> 
     <link 
     href="https://fonts.googleapis.com/css2?family=Abel&display=swap" 
     rel="stylesheet">
+    <!--KANIT-->
     <link 
     href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" 
     rel="stylesheet"> 
@@ -39,7 +45,7 @@
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
     crossorigin="anonymous">
-    <!--IMPORTAÇÃO DO ARQUIVO DE CSS-->
+    <!--IMPORTAÇÃO DO FONT AWESOME-->
     <link 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
     rel="stylesheet">
@@ -67,6 +73,7 @@
           height="100" />
         </a>
 
+        <!--DROPDOWN BUTTON-->
         <button 
         class="navbar-toggler" 
         type="button" 
@@ -140,9 +147,11 @@
 
     <hr>
 
+    <!--ABOUT SECTION-->
     <div class="container mb-5">
       <div class="row">
         <div class="col-12 box">
+          <!--TÍTULO DA SESSÃO-->
           <h3 class='main-title'>
             Sobre o Empório
           </h3>
@@ -150,6 +159,7 @@
         </div>
         
         <div class="col-md-6 mt-4 box">
+          <!--IMAGEM ILUSTRATIVA DO LUGAR-->
           <img 
           width="100%" 
           height="100%" 
@@ -160,10 +170,12 @@
 
         <div class="sobre col-md-6 box">
           <hr class="hrcel">
+          <!--SUBTÍTULO-->
           <h3 class="about-title"> 
             Um lugar para relaxar e descansar a mente
           </h3>
           <hr>
+          <!--TEXTO DE EXPLICAÇÃO-->
           <p class="texto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
             molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
@@ -195,11 +207,13 @@
     </div>
 
     <hr>
+    <!--TESTIMONIALS SECTION-->
     <h3 class='main-title testimonials'>DEPOIMENTOS DOS CLIENTES</h3>
     <hr><br>
 
     <div class="outerdiv">
       <div class="innerdiv">
+        <!--Cada um dos cartões é separado a partir das divs com a classe eachdiv-->
         <div class="div1 eachdiv">
           <div class="userdetails">
             <div class="imgbox">
@@ -364,9 +378,11 @@
       </iframe>
     </div>
 
+    <!--FOOTER SECTION-->
     <div class="footer-dark">
       <footer>
         <div class="container">
+          <!--Cada uma das linhas do footer é definida em um row-->
           <div class="row">
             <div class="col-md-4 item">
               <h3>
@@ -431,12 +447,15 @@
     src="client/js/index/index.js" 
     defer="true">
     </script>
+    <!--Importação do javascript referente ao bootstrap-->
     <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous">
     </script> 
+    <!--Botão de troca de tema-->
     <script src="client/js/components/stylemode/cssmode.js"></script>
+    <!--Seleção de tema pelo localStorage-->
     <script src="client/js/components/stylemode/startstyle.js"></script>
   </body>
 </html>
