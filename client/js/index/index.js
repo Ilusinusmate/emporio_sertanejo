@@ -75,3 +75,17 @@ buttons.forEach(button => {
     delete activeSlide.dataset.active
   })
 })
+
+const depoimentos = document.querySelectorAll(".eachdiv");
+
+depoimentos.forEach(depoimento => {
+    depoimento.addEventListener('mouseover', () => {
+        depoimento.classList.remove('triggered');
+        depoimento.classList.add('zoom');
+    });
+
+    depoimento.addEventListener('mouseout', () => {
+        depoimento.classList.remove('zoom');
+        depoimento.classList.add('zoomout');
+    });
+});
