@@ -739,7 +739,7 @@ a:link,a:active,a:visited,a:hover{
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: 200ms opacity ease-in-out;
+    transition: 400ms opacity ease-in-out;
     transition-delay: 200ms;
 }
   
@@ -785,9 +785,13 @@ a:link,a:active,a:visited,a:hover{
 }
   
 .carousel-button.prev {
+    background: none;
     left: 1rem;
+    outline: none;
 }
   
 .carousel-button.next {
+    outline: none;
+    background: none;
     right: 1rem;
 }
