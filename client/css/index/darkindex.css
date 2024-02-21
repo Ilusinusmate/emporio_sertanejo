@@ -768,17 +768,19 @@ a:link,a:active,a:visited,a:hover{
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
     border-radius: .25rem;
+    transition: 1s;
     padding: 0 .5rem;
     background-color: rgba(0, 0, 0, .1);
 }
   
 .carousel-button:hover,
 .carousel-button:focus {
+    transition: 500ms;
     color: white;
     background-color: rgba(0, 0, 0, .2);
 }
   
-  .carousel-button:focus {
+.carousel-button:focus {
     outline: 1px solid black;
 }
   

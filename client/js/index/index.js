@@ -1,3 +1,18 @@
+switch (window.location.href) {
+    case "http://127.0.0.1:5500/":
+        window.location.href = "http://127.0.0.1:5500/index.html";
+        break;
+    case "http://localhost:5500/":
+        window.location.href = "http://localhost:5500/index.html";
+        break;
+    case "http://ilusinusmate.github.io/emporio_sertanejo":
+        window.location.href = "http://ilusinusmate.github.io/emporio_sertanejo/index.html";
+        break;
+    case "https://ilusinusmate.github.io/emporio_sertanejo":
+        window.location.href = "https://ilusinusmate.github.io/emporio_sertanejo/index.html";
+        break;
+}
+
 if (localStorage.getItem("cidade") === null) {
     localStorage.setItem("cidade", "cabedelo");
 };
@@ -41,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var footer = document.querySelector('.footer-dark');
     checkVisibility(footer);
+
 })
 
 //função que carrega o mapa
