@@ -92,6 +92,13 @@ buttons.forEach(button => {
   })
 })
 
+function autoClickNextButton() {
+    let next = document.querySelector('.carousel-button.prev');
+    setInterval(function() {next.click();}, 7000); 
+}
+
+autoClickNextButton();
+
 const depoimentos = document.querySelectorAll(".eachdiv");
 
 depoimentos.forEach(depoimento => {
