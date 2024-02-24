@@ -5,10 +5,7 @@ switch (window.location.href) {
     case "http://localhost:5500/":
         window.location.href = "http://localhost:5500/index.html";
         break;
-    case "http://ilusinusmate.github.io/emporio_sertanejo":
-        window.location.href = "http://ilusinusmate.github.io/emporio_sertanejo/index.html";
-        break;
-    case "https://ilusinusmate.github.io/emporio_sertanejo":
+    case "https://ilusinusmate.github.io/emporio_sertanejo/":
         window.location.href = "https://ilusinusmate.github.io/emporio_sertanejo/index.html";
         break;
 }
