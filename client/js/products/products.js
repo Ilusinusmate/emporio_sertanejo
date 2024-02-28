@@ -18,9 +18,11 @@ async function renderize() {
 
     switch (cidade.value){
         case "joaopessoa":
+            localStorage.setItem("cidade", "joaopessoa")
             var unit = 1;
             break;
         case "cabedelo":
+            localStorage.setItem("cidade", "cabedelo")
             var unit = 2;
             break;
         default:

@@ -147,17 +147,41 @@
     <!--SLIDER EMPORIO SERTANEJO-->
     <section id="carrossel" aria-label="Newest Photos">
       <div class="carousel" data-carousel>
-        <button class="carousel-button prev" data-carousel-button="prev">&#8592;</button>
-        <button class="carousel-button next" data-carousel-button="next">&#8594;</button>
+        <button class="carousel-button prev" data-carousel-button="prev"><img width="50px" src="client/img/arrow-left.png" alt=""></button>
+        <button class="carousel-button next" data-carousel-button="next"><img width="50px" src="client/img/arrow-right.png" alt=""></button>
         <ul data-slides>
           <li class="slide" data-active>
             <img src="https://source.unsplash.com/78A265wPiO4" alt="Nature Image #1">
+            <div class="slide-text">
+              <h1>
+                Texto sobre a imagem 1
+              </h1>
+              <p>
+                Talvez isso funcione, vamo testar né
+              </p>
+            </div>
           </li>
           <li class="slide">
             <img src="https://source.unsplash.com/eOpewngf68w" alt="Nature Image #2">
+            <div class="slide-text">
+              <h1>
+                Texto sobre a imagem 1
+              </h1>
+              <p>
+                Talvez isso funcione, vamo testar né
+              </p>
+            </div>
           </li>
           <li class="slide">
             <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Nature Image #3">
+            <div class="slide-text">
+              <h1>
+                será que funciona memo
+              </h1>
+              <p>
+                Talvez isso funcione, vamo testar né
+              </p>
+            </div>
           </li>
         </ul>
       </div>
@@ -178,14 +202,18 @@
         
         <div class="col-md-6 mt-4 box">
           <!--IMAGEM ILUSTRATIVA DO LUGAR-->
-          <img 
-          width="100%" 
-          height="100%" 
-          class="img-fluid" 
-          src='client/img/emporio.jpg'
-          >
+          <div class="image-container">
+            <img 
+            class="img-fluid image-desktop" 
+            src='client/img/emporio.jpg'
+            >
+            <img 
+            class="img-fluid image-mobile" 
+            src='client/img/emporio.jpg'
+            >
+          </div>
         </div>
-
+    
         <div class="sobre col-md-6 box">
           <hr class="hrcel">
           <!--SUBTÍTULO-->
@@ -223,7 +251,8 @@
         </div>
       </div>
     </div>
-
+    
+    
     <hr>
     <!--TESTIMONIALS SECTION-->
     <h3 class='main-title testimonials'>DEPOIMENTOS DOS CLIENTES</h3>

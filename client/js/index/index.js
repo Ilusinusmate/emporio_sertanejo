@@ -8,6 +8,9 @@ switch (window.location.href) {
     case "https://ilusinusmate.github.io/emporio_sertanejo/":
         window.location.href = "https://ilusinusmate.github.io/emporio_sertanejo/index.html";
         break;
+    case "https://d5b90178-ff3b-435c-b1dc-f6ca57f0ddf8-00-1pfs685s7rfx3.worf.replit.dev/":
+        window.location.href = "https://d5b90178-ff3b-435c-b1dc-f6ca57f0ddf8-00-1pfs685s7rfx3.worf.replit.dev/index.html";
+        break;
 }
 
 if (localStorage.getItem("cidade") === null) {
@@ -19,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cidade.addEventListener("input", handleSelect);
 
     // função que verifica se o elemento já foi alcançado pelo scroll
-    function checkScroll(elements) {
+    function checkManyScroll(elements) {
         window.addEventListener('scroll', function () {
             elements.forEach(function (element) {
                 var elementPosition = element.getBoundingClientRect().top;
@@ -44,16 +47,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    function checkScroll(element) {
+        window.addEventListener('scroll', function () {
+            var elementPosition = element.getBoundingClientRect().top;
+            var screenHeight = window.innerHeight;
+        
+            if (elementPosition < screenHeight) {
+                element.classList.add('triggered');
+            }
+        });
+    }
+
     // geração das variáveis que serão verificadas pelas funções acima
     var eachdivs = document.querySelectorAll('.eachdiv');
-    checkScroll(eachdivs);
+    checkManyScroll(eachdivs);
     
     var maps = document.querySelectorAll('.maps');
-    checkScroll(maps);
+    checkManyScroll(maps);
+
+    var box = document.querySelectorAll('.box') 
+    checkManyScroll(box)
+
+    var testimonialsTitle = document.querySelector('.testimonials')
+    checkScroll(testimonialsTitle)
 
     var footer = document.querySelector('.footer-dark');
     checkVisibility(footer);
-
 })
 
 //função que carrega o mapa
