@@ -316,6 +316,67 @@ a.navbar-brand {
     font-family: 'Bebas Neue', cursive;
 }
 
+.image-container {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Define a largura máxima do contêiner */
+    height: 0; /* Inicialmente define a altura como 0 */
+    padding-top: 75%; /* Proporção 4:3 (75% = (3/4)*100) */
+    position: relative;
+}
+
+.image-mobile {
+    width: 100%;
+    height: 400px !important;
+    object-fit: cover; /* Para manter a proporção 16:9 */
+}
+
+.image-container img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para manter a proporção 4:3 */
+    object-position: center; /* Centraliza a área de foco */
+}
+  
+/* Estilo para dispositivos móveis */
+
+@media (max-width: 991px) {
+    .image-desktop {
+        display: none; /* Oculta a imagem no celular */
+    }
+    .image-mobile {
+        width: 100%;
+        height: 550px !important;
+        object-fit: cover; /* Para manter a proporção 16:9 */
+    }
+}
+
+@media (max-width: 767px) {
+    .image-desktop {
+        display: none; /* Oculta a imagem no celular */
+    }
+    .image-mobile {
+        width: 100%;
+        height: 48vw !important;
+        object-fit: cover; /* Para manter a proporção 16:9 */
+    }
+}
+
+@media (max-width: 600px) {
+    .image-desktop {
+        display: none; /* Oculta a imagem no celular */
+    }
+    .image-mobile {
+        width: 100%;
+        height: 60vw !important;
+        object-fit: cover; /* Para manter a proporção 16:9 */
+    }
+}
+
 .item {
     opacity: 0;
     animation-delay: 1.5s;
@@ -750,7 +811,18 @@ a:link,a:active,a:visited,a:hover{
     transition: 400ms opacity ease-in-out;
     transition-delay: 200ms;
 }
-  
+
+.slide-text {
+    position: absolute;
+    bottom: 40%;
+    top: 40%;
+    left: 40%;
+    right: 40%; 
+    color: white;
+    font-size: 100%; 
+    padding: 1vw;
+}
+
 .slide > img {
     display: block;
     width: 100%;
