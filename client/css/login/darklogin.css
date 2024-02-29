@@ -313,7 +313,6 @@ h6 span{
 
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 600px) {
-    
     #planta {
         display: none;
     }

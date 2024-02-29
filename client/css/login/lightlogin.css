@@ -266,7 +266,9 @@ h6 span{
 #sun {
     width: 35px;
     height: 35px;
-}.main-login {
+}
+
+.main-login {
     width: 100vw;
     display: flex;
     justify-content: center;
