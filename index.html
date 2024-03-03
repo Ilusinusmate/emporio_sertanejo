@@ -98,7 +98,8 @@
         data-bs-target="#navbarNavDropdown" 
         aria-controls="navbarNavDropdown" 
         aria-expanded="false" 
-        aria-label="Toggle navigation">
+        aria-label="Toggle navigation"
+        id="navbar-toggler">
           <span class="navbar-toggler-icon"></span>
         </button>
   
@@ -117,7 +118,7 @@
               id="products" 
               class="nav-link mx-2" 
               href="client/html/products.html">
-                Produtos
+                PRODUTOS
               </a>
             </li>
             <!--Seletor de Cidade-->
@@ -127,10 +128,10 @@
                 id="cidade" 
                 class="selectpicker">
                   <option value="joaopessoa">
-                    João Pessoa
+                    JOÃO PESSOA
                   </option>
                   <option value="cabedelo">
-                    Cabedelo
+                    CABEDELO
                   </option>
                 </select>   
               </a>
@@ -208,14 +209,13 @@
     <hr>
 
     <!--ABOUT SECTION-->
-    <div class="container mb-5">
+    <div class="container mt-1 mb-5">
       <div class="row">
-        <div class="col-12 box">
+        <div class="col-12 box mb-4">
           <!--TÍTULO DA SESSÃO-->
-          <h3 class='main-title'>
+          <h3 class='main-title aboutbar-title'>
             Sobre o Empório
           </h3>
-          <hr>
         </div>
         
         <div class="col-md-6 mt-4 box">
@@ -269,12 +269,79 @@
         </div>
       </div>
     </div>
+
+    <!--SERVICES ICON-->
+    <div class="services-container">
+      <h1 class="services-title main-title service-animation">
+        Nossos Serviços
+      </h1>
+      <div class="services-row">
+        <div class="service service-animation">
+          <img id="laptop" src="client/img/laptop.png" id="" width="40px" alt="">
+          <h2>
+            Lorem Ipsum
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste explicabo necessitatibus</p>
+        </div>
+        <div class="service service-animation">
+          <img src="client/img/laptop.png" id="" width="40px" alt="">
+          <h2>
+            Lorem Ipsum
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste explicabo necessitatibus</p>
+        </div>
+        <div class="service service-animation">
+          <img src="client/img/laptop.png" id="" width="40px" alt="">
+          <h2>
+            Lorem Ipsum
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste explicabo necessitatibus</p>
+        </div>
+        <div class="service service-animation">
+          <img src="client/img/laptop.png" id="" width="40px" alt="">
+          <h2>
+            Lorem Ipsum
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste explicabo necessitatibus</p>
+        </div>
+        <div class="service service-animation">
+          <img src="client/img/laptop.png" id="" width="40px" alt="">
+          <h2>
+            Lorem Ipsum
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste explicabo necessitatibus</p>
+        </div>
+        <div class="service service-animation">
+          <img src="client/img/laptop.png" id="" width="40px" alt="">
+          <h2>
+            Lorem Ipsum
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste explicabo necessitatibus</p>
+        </div>
+        <div class="service service-animation">
+          <img src="client/img/laptop.png" id="" width="40px" alt="">
+          <h2>
+            Lorem Ipsum
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste explicabo necessitatibus</p>
+        </div>
+        <div class="service service-animation">
+          <img src="client/img/laptop.png" id="" width="40px" alt="">
+          <h2>
+            Lorem Ipsum
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste explicabo necessitatibus</p>
+        </div>
+      </div>
+    </div>
     
     
     <hr>
     <!--TESTIMONIALS SECTION-->
-    <h3 class='main-title testimonials'>DEPOIMENTOS DOS CLIENTES</h3>
-    <hr><br>
+    <div>
+      <h3 class='main-title testimonials'>DEPOIMENTOS DOS CLIENTES</h3>
+    </div>
+    <br>
 
     <div class="outerdiv">
       <div class="innerdiv">
@@ -422,14 +489,12 @@
       </div>
     </div>
 
-    <hr>
 
     <!--Localização da Empório Sertanejo Em Um Mapa do Google Maps-->
     <div 
     id="filiais" 
-    class="mt-4"> 
+    class="mt-5 pt-1"> 
       <h3 class="main-title maps">ONDE ESTAMOS?</h3>
-      <hr>
       <iframe 
       class="maps"
       id="map" 
@@ -491,7 +556,7 @@
               <a href="index.html">
                 <img 
                 id="logo1" 
-                src="client/img/logoemporiolight.png" 
+                src="client/img/logoemporio.png" 
                 height="100" 
                 alt="logo">
               </a>

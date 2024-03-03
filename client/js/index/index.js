@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
     var eachdivs = document.querySelectorAll('.eachdiv');
     checkManyScroll(eachdivs);
     
+    var services = document.querySelectorAll('.service-animation');
+    checkManyScroll(services);
+
     var maps = document.querySelectorAll('.maps');
     checkManyScroll(maps);
 
@@ -127,4 +130,21 @@ depoimentos.forEach(depoimento => {
         depoimento.classList.remove('zoom');
         depoimento.classList.add('zoomout');
     });
+});
+
+document.getElementById('navbar-toggler').addEventListener('click', function() {
+    document.getElementById('carrossel').classList.toggle('hide-text');
+
+    var slider = document.getElementById('carrossel');
+
+    var prevButton = document.querySelector('.carousel-button.prev');
+    var nextButton = document.querySelector('.carousel-button.next');
+
+    if (slider.classList.contains('hide-text')) {
+        prevButton.style.display = 'none';
+        nextButton.style.display = 'none';
+    } else {
+        prevButton.style.display = 'block';
+        nextButton.style.display = 'block';
+    }
 });

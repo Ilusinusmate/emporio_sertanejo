@@ -22,6 +22,8 @@ CssMode.addEventListener('click', (e) => {
     let planta = document.getElementById("planta");
     let logo1 = document.getElementById("logo1");
     let logo2 = document.getElementById("logo2");
+    let laptop = document.getElementById("laptop");
+    let mapa = document.getElementById("map");
 
     // verificação de qual modo está no momento
     if (mode == "light") {
@@ -41,6 +43,8 @@ CssMode.addEventListener('click', (e) => {
             img.setAttribute("src", "client/img/sun.png");   
             nav.classList.remove("navbar-light");
             nav.classList.add("navbar-dark");
+            laptop.setAttribute("src", "client/img/laptop.png");
+            mapa.setAttribute("src", "")
         } else if (fileName === "login.html") {
             // setagem dos atributos novos e etc.
             css.setAttribute("href", "../css/login/darklogin.css");
@@ -62,11 +66,12 @@ CssMode.addEventListener('click', (e) => {
         } else if (fileName === "index.html") {
             // setagem dos atributos novos e etc.
             css.setAttribute("href", "client/css/index/lightindex.css");
-            logo.setAttribute("src", "client/img/logoemporiolight.png");
+            logo.setAttribute("src", "client/img/logoemporio.png");
             img.setAttribute("src", "client/img/moon.png");
             logo1.setAttribute("src", "client/img/logoemporiolight.png")
             nav.classList.remove("navbar-dark");
             nav.classList.add("navbar-light");
+            laptop.setAttribute("src", "client/img/laptop-dark.png");
         } else if (fileName === "login.html") {
             // setagem dos atributos novos e etc.
             css.setAttribute("href", "../css/login/lightlogin.css");

@@ -2,7 +2,11 @@ body {
     font-family: 'Titillium Web', sans-serif;
     margin: 0;
     overflow-x: hidden;
-    background-color: #dbdbdb;
+    background-color: #e6e6e6;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 /*ANIMAÇÕES*/
@@ -67,11 +71,18 @@ body {
 }
 
 /**ESTILIZAÇÃO DA NAVBAR**/
+.navbar {
+    position: relative; 
+    z-index: 1; 
+}
+
 #neubar {
-    background: #f0f0f0;
-    box-shadow: 4px 6px 12px rgba(0,0,0,0.4);
+    background-color: transparent; /* Tornando a navbar transparente */
+    box-shadow: none; /* Removendo a sombra da navbar */
     animation: slideDown 0.75s ease-in-out forwards;
-    opacity: 0.9;
+    position: absolute; /* Adicionando position fixed para fixar a navbar na parte superior */
+    width: 100%; /* Definindo a largura como 100% */
+    z-index: 1; /* Definindo um z-index maior para a navbar */
 }
 
 @media only screen and (max-width: 767px) {
@@ -126,7 +137,6 @@ body {
 .nav-item .active {
     border-radius: 6px;
     background: linear-gradient(145deg, #e44e13fa, #e44e1394);
-    box-shadow: 4px 4px 8px #c1b3acab, -4px -4px 8px #ffe9e000;
     color: white !important;
 }
 
@@ -153,8 +163,14 @@ a.navbar-brand {
 }
 
 #products {
+    color: white;
     transition: 0.5s;
     position: relative;
+}
+
+#products:hover {
+    color: rgb(163, 163, 163);
+    transition: 0.5s;
 }
 
 #products::after {
@@ -208,7 +224,7 @@ a.navbar-brand {
 
 /**SELETOR DE CIDADES**/
 #cidade {
-    color: black;
+    color: white;
     background: none;
     border: none;
     transition: 0.5s;
@@ -317,6 +333,22 @@ a.navbar-brand {
     font-family: 'Bebas Neue', cursive;
 }
 
+.aboutbar-title {
+    margin-bottom: 30px;
+}
+
+.aboutbar-title::after {
+    content: '';
+    font-family: 'Bebas Neue', cursive;
+    background: #e44e13fa;
+    width: 400px;
+    height: 3px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .image-container {
     text-align: center;
     align-items: center;
@@ -387,6 +419,7 @@ a.navbar-brand {
 /*ESTILIZAÇÃO DO MAPA*/
 .maps {
     opacity: 0;
+    margin-top: 2%;
     transition: opacity 1.5s ease;
 }
 
@@ -407,7 +440,7 @@ a.navbar-brand {
 .footer-dark {
     padding: 50px 0;
     color: black;
-    background-color: #f0f0f0;
+    background-color: #f3e7e7;
 }
   
 .footer-dark h3 {
@@ -555,6 +588,7 @@ a:link,a:active,a:visited,a:hover{
 	grid-gap: 1.5rem;
 	grid-template-rows: repeat(2,22rem);
 	grid-template-columns: repeat(4,17rem);
+    margin-top: 2%;
 }
 
 .eachdiv {
@@ -792,11 +826,12 @@ a:link,a:active,a:visited,a:hover{
     box-sizing: border-box;
   }
 
-.carousel {
+  .carousel {
     width: 100vw;
-    height: 85vh;
-    animation: slideDown 0.75s ease-in-out forwards;
+    height: 100vh;
     position: relative;
+    animation: slideDown 0.75s ease-in-out forwards;
+    z-index: 0; /* Definindo um z-index menor para o slider */
 }
   
 .carousel > ul {
@@ -846,7 +881,7 @@ a:link,a:active,a:visited,a:hover{
   
 .slide[data-active] {
     opacity: 1;
-    z-index: 1;
+    z-index: 0; 
     transition-delay: 0ms;
 }
   
@@ -887,4 +922,105 @@ a:link,a:active,a:visited,a:hover{
     background: none;
     outline: none;
     right: 1rem;
+}
+
+.hide-text .slide-text {
+    display: none;
+}
+
+.services-container {
+    background-color: #f0f0f0;
+    padding: 3% 3% 5% 5%;
+    text-align: center;
+    color: black;
+}
+
+.services-title {
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.main-title.triggered::after {
+    content: '';
+    font-family: 'Bebas Neue', cursive;
+    background: #e44e13fa;
+    width: 400px;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.service {
+    font-family: 'Inter', sans-serif;
+    border: 0.5px solid #e44e135c;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    background: transparent;    
+    transition: transform 0.5s, background 0.5s ease-in-out;
+}
+
+.service-animation {
+    opacity: 0;
+}
+
+.service-animation:nth-child(1) {
+    animation-delay: 0.1s;    
+}
+
+.service-animation:nth-child(2) {
+    animation-delay: 0.2s;    
+}
+
+.service-animation:nth-child(3) {
+    animation-delay: 0.3s;    
+}
+
+.service-animation:nth-child(4) {
+    animation-delay: 0.4s;    
+}
+
+.service-animation:nth-child(5) {
+    animation-delay: 0.5s;    
+}
+
+.service-animation:nth-child(6) {
+    animation-delay: 0.6s;    
+}
+
+.service-animation:nth-child(7) {
+    animation-delay: 0.7s;    
+}
+
+.service-animation:nth-child(8) {
+    animation-delay: 0.8s;    
+}
+
+.service img {
+    margin-bottom: 10px;
+}
+
+.service h2 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service:hover {
+    background: #e44e13fa;
+    color: black;
+    transform: scale(1.05);
+}
+
+#filiais {
+    background-color: #f0f0f0;
 }

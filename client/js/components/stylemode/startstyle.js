@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let logo1 = document.getElementById("logo1");
     let logo2 = document.getElementById("logo2");
     let planta = document.getElementById("planta");
+    let laptop = document.getElementById("laptop");
 
     // verificação de qual modo está no momento
     if (localStorage.getItem("cssmode") === "dark") {
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             logo1.setAttribute("src", "client/img/logoemporio.png")
             nav.classList.remove("navbar-light");
             nav.classList.add("navbar-dark");
+            laptop.setAttribute("src", "client/img/laptop.png");
         } else if (fileName === "products.html") {
             // setagem dos atributos novos e etc.
             css.setAttribute("href", "../css/products/darkproducts.css");
@@ -36,17 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
             logo2.setAttribute("src", "../img/logoemporio.png");
             logo1.setAttribute("src", "../img/logoemporio.png");
             img.setAttribute("src", "../img/sun.png");   
-            planta.setAttribute("src", "../img/plantadark.svg")
+            planta.setAttribute("src", "../img/plantadark.svg");
         }
     } else if (localStorage.getItem("cssmode") === "light") {
         if (fileName === "index.html") {
             // setagem dos atributos novos e etc.
             css.setAttribute("href", "client/css/index/lightindex.css");
-            logo.setAttribute("src", "client/img/logoemporiolight.png");
+            logo.setAttribute("src", "client/img/logoemporio.png");
             img.setAttribute("src", "client/img/moon.png");
             logo1.setAttribute("src", "client/img/logoemporiolight.png")
             nav.classList.remove("navbar-dark");
             nav.classList.add("navbar-light");
+            laptop.setAttribute("src", "client/img/laptop-dark.png");
         } else if (fileName === "products.html") {
             // setagem dos atributos novos e etc.
             css.setAttribute("href", "../css/products/lightproducts.css");
