@@ -341,7 +341,7 @@ a.navbar-brand {
     content: '';
     font-family: 'Bebas Neue', cursive;
     background: #e44e13fa;
-    width: 400px;
+    width: 30%;
     height: 3px;
     position: absolute;
     bottom: 20px;
@@ -930,7 +930,7 @@ a:link,a:active,a:visited,a:hover{
 
 .services-container {
     background-color: #f0f0f0;
-    padding: 3% 3% 5% 5%;
+    padding: 40px 40px 40px 40px;
     text-align: center;
     color: black;
 }
@@ -945,13 +945,23 @@ a:link,a:active,a:visited,a:hover{
     content: '';
     font-family: 'Bebas Neue', cursive;
     background: #e44e13fa;
-    width: 400px;
+    width: 30%;
     height: 3px;
     position: absolute;
     bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
 }
+
+@media only screen and (max-width: 800px) {
+    .main-title.triggered::after {
+        width: 40% !important;
+    }
+    .aboutbar-title::after {
+        width: 40% !important;
+    }
+}
+
 
 .services-row {
     display: grid;
@@ -962,8 +972,8 @@ a:link,a:active,a:visited,a:hover{
 .service {
     font-family: 'Inter', sans-serif;
     border: 0.5px solid #e44e135c;
-    padding: 25px 10px;
-    border-radius: 5px;
+    padding: 25px 10%;
+    border-radius: 8px;
     font-size: 12px;
     cursor: pointer;
     background: transparent;    
