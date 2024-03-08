@@ -183,7 +183,7 @@ a.navbar-brand {
 }
 
 #products:hover {
-    color: rgb(163, 163, 163);
+    color: rgb(176, 174, 174);
     transition: 0.5s;
 }
 
@@ -258,7 +258,7 @@ a.navbar-brand {
 }
 
 #cidade:hover {
-    color: rgb(163, 163, 163);
+    color: rgb(176, 174, 174);
     transition: 0.5s;
 }
 
@@ -955,11 +955,24 @@ a:link,a:active,a:visited,a:hover{
         width: 40% !important;
     }
 }
-
+    
 .services-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .services-row {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto); 
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .services-row {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
 
 .service {
